@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>ElectricalAnalogousCircuitDesign by bourneagain</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>ElectricalAnalogousCircuitDesign</h1>
+        <h2></h2>
+
+        <section id="downloads">
+          <a href="https://github.com/bourneagain/ElectricalAnalogousCircuitDesign/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/bourneagain/ElectricalAnalogousCircuitDesign/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/bourneagain/ElectricalAnalogousCircuitDesign" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <p>R.SHYAM BE-SW EEE
+ELECTRICAL ANALOGOUS CIRCUIT DESIGN USING C
+PROJECT OBJECTIVE:
+“The true creator is necessity, which is the mother of invention”
+-Plato
+Heretofore the mechanical designs were analyzed using cryptic mechanical models. So as a student of core electrical branch, I decided to use electrical analogy for mechanical designs for easier and better model analysis. This project's objective is to obtain equivalent electrical analogous circuit for the user designed mechanical systems aiming to be of aid to the mechanical engineers. The electrical analogous systems once obtained are far easier to work with than old mechanical designs. This project is written in popular C programming language keeping in mind user friendliness.</p>
+
+<p>￼￼￼￼LANGUAGE USED: COMPILER USED : PLATFORM USED:
+C Programming Language
+Turbo C++ Compiler, Version 3.0 MS DOS</p>
+
+<p>ABOUT THE PROJECT:
+The project acquaints the user with a Graphical User Interface (GUI) to help him bridge the gap between the conversions of Mechanical System designed virtually using this software to equivalent electrical analogous circuit for easier and better study of the mechanical design. Once obtained, the electrical analogy paves way for accurate and easier manipulation and further research into the development of designed mechanical design.
+￼￼
+￼￼INTRODUCTION:
+The program welcomes the user with a brief introduction about the software. The Home Screen acts like the home page of a website containing links to the two broad divisions of this package namely the Mechanical Translation and Mechanical Rotational Systems. When user moves the mouse pointer over the screen, help is provided to the user for better navigation through contextual help display at the bottom of the screen. The entire screen is designed to give the user a feel of déjà vu as it mimics the windows classic style. The usage of mouse programming for navigation is an example.
+The same screen characteristics are carried forward to subsequent screens too. In the Mechanical Translation screen the user views the screen divided into four sections, The Tools Palette, The Design Area, The Title Bar, The Menu Bar, and Help Bar.
+In the Tools Palette, buttons for placing mechanical design elements have been provided, namely Mass M, Spring K, Dash Pot B, Force F, B-Dir.
+The Design Area is the workplace where the designer can design the mechanical systems virtually using the concept of pick-n-place of the design elements from the tools palette.
+In the Menu Bar the user can choose the option of getting either Force-Voltage Equivalent Electrical Analogous Circuit or Force-Current Equivalent Electrical Analogous Circuit. The user is aided further by the display of Contextual Help at the bottom in help bar.
+In the Help Bar, the user is given onscreen contextual help as and when the user moves the cursor over the items on the screen. The user friendliness of the software is given prime importance right from the design stage itself.
+￼￼Electrical Analogous Circuit Design Using C
+-1-
+￼￼
+￼￼CONCEPTS USED:
+￼Graphical User Interface (GUI)
+The selection of various software elements and other options can be done using virtual buttons designed and placed on the user screen. When the user clicks on the button, the function of the button is displayed in the help bar. This gives the user as to what and how the button’s function is to be used. The various graphics functions in C like rectangle(), circle() and so on as well as the user defined graphical functions are used logically for the construction of the user screen as well as being the backbone of circuit design aid. The GUI is an attractive feature in this project.
+Mouse Programming
+GUI and mouse go hand in hand. The mouse is used in the select screen to select the choices and to press the button. Also the user can position the design elements by using mouse. Mouse programming is done using int86() function of C programming language. The interrupt used in this program is INT 33H.
+Structure Concept
+As the entire concept of the project is logical graphic design, the coordinates of the design elements placed on the screen by the user are the only means of deriving any logics for further processing. In order to efficiently store and process coordinates of design elements, the coordinates are stored as separate structures. This paves way for easy manipulation and for the evolution into the desired electrical analogous circuit.
+Force-Voltage and Force-Current Analysis
+This analysis is used for obtaining electrical equivalent analogous circuits. The analysis is based on mapping between mechanical elements and electrical parameters such as resistance, inductance, capacitance as well as voltage and current sources.
+￼￼Electrical Analogous Circuit Design Using C
+-2-
+￼￼
+￼￼IDEA:
+A System remains analogous as long as the differential equations governing the system or transfer functions are of identical form. The electrical analogue of any other kind of system is of great importance since it is easier to construct electrical models and analyze them.
+The three basic elements Mass, Dashpot and Spring that are used in modeling Mechanical Translational systems are analogous to Resistance, Inductance and Capacitance of electrical systems. The input force in mechanical system is analogous to either voltage source or current source in electrical systems. The output velocity in mechanical system is analogous to either current or voltage in an element in electrical system. Since the electrical system has two types of inputs either voltage or current source, there are two types of analogies namely Force-Voltage Analogy and Force-Current Analogy.
+Our idea is to derive the electrical equivalent for the user designed mechanical model. The basic logic behind the conversion follows the mapping of the mechanical realizable models to the equivalent Electrical Model.
+￼￼Electrical Analogous Circuit Design Using C
+-3-
+￼￼
+￼￼Representation of SUSPENSION SYSTEM using PHYSICAL MODEL
+￼ANALOGOUS SYSTEMS
+Force – Voltage Analogous Circuit Force - Current Analogous Circuit
+￼￼￼￼￼Electrical Analogous Circuit Design Using C
+-4-
+￼￼
+￼￼￼￼Electrical Analogous Circuit Design Using C
+￼￼MECHANICAL TRANSLATIONAL &amp; ROTATIONAL SYSTEMS:
+It is possible to make electrical and mechanical systems using analogs. An analogous
+electrical and mechanical system will have differential equations of the same form.
+MECHANICAL TRANSLATIONAL SYSTEMS:
+The model of Mechanical Translational Systems can be obtained by using three basic elements Mass, Spring and Dashpot. The weight of the mechanical system is represented by the Element Mass and it is assumed to be concentrated at the center of the body. The elastic deformation of the body can be represented by a spring. The friction existing in a mechanical system can be represented by a dashpot.
+MECHANICAL ROTATIONAL SYSTEMS:
+The model of Mechanical Rotational Systems can be obtained by using three basic elements moment of inertia of Mass, Dashpot with rotational frictional coefficient and Torsion Spring with stiffness. The weight of the mechanical system is represented by the Moment Of Inertia of the mass and it is assumed to be concentrated at the center of the body. The elastic deformation of the body can be represented by a Torsion Spring. The friction existing in a mechanical system can be represented by a dashpot
+ELECTRICAL ANALOGOUS OF MECHANICAL TRANSLATIONAL SYSTEMS:
+Some points to be kept in mind while deriving electrical analogies,
+System remains analogous as long as the differential equations governing the system or transfer functions are of identical form.
+The electrical analogue of any other kind of system is of great importance since it is easier to construct electrical models and analyze them.
+The input force in mechanical system is analogous to either voltage source or current source in electrical systems. The output velocity in mechanical system is analogous to either current or voltage in an element in electrical system.
+￼￼￼￼￼Electrical Analogous Circuit Design Using C
+-5-
+￼￼
+￼￼GUIDELINES TO OBTAIN ELECTRICAL ANALOGOUS SYSTEMS BASED ON FORCE VOLTAGE ANALOGY:
+In electrical systems the elements in series will have same current, likewise in mechanical systems, the elements have same velocity are said to be in series.
+The elements having same velocity in mechanical system should have analogous same current in electrical analogous system.
+Each node in the mechanical system corresponds to a closed loop in electrical system. The number of meshes in electrical analogous is same as that of the number of nodes in mechanical system. Hence the number of mesh currents and system equations will be same as that of the number of velocities of nodes in mechanical systems.
+The mechanical driving force and passive elements connected to the node in mechanical system should be represented by analogous elements in a closed loop in analogous electrical system.
+The elements connected between two nodes in mechanical systems are represented as a common element between two meshes in electrical analogous system.
+FORCE VOLTAGE ANALOGY:
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼ITEM
+DISSIPATIVE ELEMENT
+MECHANICAL SYSTEM
+ELECTRICAL SYSTEM
+￼￼￼￼￼￼￼￼￼INDEPENDENT
+￼FORCE ,f
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼FRICTIONAL COEFFICIENT
+VOLTAGE, e
+￼￼￼VARIABLE(INPUT)
+￼￼￼￼￼￼￼￼DEPENDENT VARIABLE(OUTPUT)
+VELOCITY ,v
+CURRENT, i
+￼￼￼OF
+￼￼RESISTANCE , R
+￼￼￼￼￼￼DASHPOT , B
+￼￼￼￼￼￼￼￼￼￼￼￼￼STORAGE ELEMENT
+MASS, M
+INDUCTANCE, L
+￼￼￼￼￼￼￼￼￼￼￼INVERSE CAPACITANCE, 1/C
+￼￼￼STIFFNESS OF SPRING, K
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼OF
+￼￼￼￼Electrical Analogous Circuit Design Using C
+-6-
+￼￼
+￼￼￼￼￼￼￼PHYSICAL LAW
+￼NEWTON SECOND LAW, ∑F=0.
+￼￼￼￼￼KIRCHOFF VOLTAGE LAW, ∑V=0.
+￼￼￼CHANGING THE LEVEL OF
+￼￼￼OF
+￼￼￼￼￼LEVER
+￼￼￼TRANSFORMER
+￼￼INDEPENDENT VARIABLE
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼GUIDELINES TO OBTAIN ELECTRICAL ANALOGOUS SYSTEMS BASED ON FORCE CURRENT ANALOGY:
+In electrical systems the elements in parallel will have same voltage, likewise in mechanical systems, the elements have same force are said to be in parallel.
+The elements having same velocity in mechanical system should have analogous same voltage in electrical analogous system.
+Each node in the mechanical system corresponds to a closed loop in electrical system. The number of meshes in electrical analogous is same as that of the number of nodes in mechanical system. Hence the number of node voltage and system equations will be same as that of the number of velocities of nodes in mechanical systems.
+The mechanical driving force and passive elements connected to the node in mechanical system should be represented by analogous elements in a closed loop in analogous electrical system.
+The elements connected between two nodes in mechanical systems are represented as a common element between two meshes in electrical analogous system.
+FORCE CURRENT ANALOGY:
+￼￼￼￼￼￼￼￼￼￼ITEM
+￼MECHANICAL SYSTEM
+￼￼￼￼￼ELECTRICAL SYSTEM
+￼￼INDEPENDENT
+￼￼￼￼￼￼￼￼￼FORCE ,f
+￼￼￼CURRENT, i
+￼￼VARIABLE(INPUT)
+￼￼￼￼￼￼￼￼￼￼DEPENDENT VARIABLE(OUTPUT)
+￼￼￼￼￼VELOCITY ,v
+￼￼￼VOLTAGE, v
+￼￼￼￼￼￼￼￼￼￼￼Electrical Analogous Circuit Design Using C
+-7-
+￼￼
+￼￼￼￼￼￼￼￼￼￼￼￼￼FRICTIONAL COEFFICIENT DASHPOT , B
+OF
+￼DISSIPATIVE ELEMENT
+CONDUCTANCE ,G=1/R
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼STORAGE ELEMENT
+MASS, M
+CAPACITANCE, C
+￼￼￼￼￼￼￼￼￼￼￼STIFFNESS OF SPRING, K
+INVERSEOF
+￼￼￼￼INDUCTANCE, 1/L
+￼￼￼￼￼￼￼￼￼KIRCHOFF CURRENT LAW, ∑i=0
+￼￼￼￼PHYSICAL LAW
+NEWTON SECOND LAW, ∑F=0.
+￼￼￼￼￼￼￼￼￼￼CHANGING THE LEVEL OF INDEPENDENT VARIABLE
+OF
+￼￼￼LEVER
+TRANSFORMER
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼ELECTRICAL ANALOGOUS OF MECHANICAL ROTATIONAL SYSTEMS:
+We have in similar fashion analogs for rotational systems too. The following provides the necessary guidelines for conversion.
+GUIDELINES TO OBTAIN ELECTRICAL ANALOGOUS ROTATIONAL SYSTEMS BASED ON TORQUE VOLTAGE ANALOGY:
+In electrical systems the elements in series will have same current, likewise in mechanical systems, the elements have same angular velocity are said to be in series. The elements having same angular velocity in mechanical system should have analogous same current in electrical analogous system.
+Each node in the mechanical system corresponds to a closed loop in electrical system. The number of meshes in electrical analogous is same as that of the number of nodes in mechanical system. Hence the number of mesh currents and system equations will be same as that of the number of velocities of nodes in mechanical systems.
+The mechanical driving force (torque) and passive elements connected to the node in mechanical system should be represented by analogous elements in a closed loop in analogous electrical system.
+￼￼￼￼￼￼￼Electrical Analogous Circuit Design Using C
+-8-
+￼￼
+￼￼The elements connected between two nodes (moment of inertia) in mechanical systems are represented as a common element between two meshes in electrical analogous system.
+TORQUE VOLTAGE ANALOGY:
+￼￼￼￼￼￼ITEM
+￼￼￼￼MECHANICAL SYSTEM
+￼￼￼￼￼ELECTRICAL SYSTEM
+￼￼INDEPENDENT VARIABLE(INPUT)
+￼￼￼￼￼￼￼￼￼￼￼TORQUE, T
+￼￼￼VOLTAGE, e
+￼￼￼￼￼￼￼￼￼￼￼DEPENDENT VARIABLE(OUTPUT)
+ANGULAR VELOCITY, ω
+￼￼CURRENT, i
+￼￼￼￼￼￼￼￼￼￼DISSIPATIVE ELEMENT
+￼￼￼￼ROTATIONAL COEFFICIENT OF
+￼￼￼RESISTANCE , R
+￼￼DASHPOT , B
+￼￼￼￼￼￼￼￼￼￼￼￼STORAGE ELEMENT
+￼￼￼￼MOMENT OF INERTIA, J
+￼￼INDUCTANCE, L
+￼￼￼￼￼￼￼￼￼￼INVERSEOF
+￼￼STIFFNESS OF SPRING, K
+￼￼CAPACITANCE, 1/C
+￼￼￼￼￼￼￼￼￼PHYSICAL LAW
+NEWTON SECOND LAW, ∑T=0
+￼￼￼￼KIRCHOFF VOLTAGE LAW, ∑v=0
+￼￼CHANGING THE LEVEL OF
+￼￼￼OF
+￼￼￼￼￼￼GEAR
+￼￼￼TRANSFORMER
+￼￼INDEPENDENT VARIABLE
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼GUIDELINES TO OBTAIN ELECTRICAL ANALOGOUS SYSTEMS BASED ON TORQUE CURRENT ANALOGY:
+In electrical systems the elements in parallel will have same voltage, likewise in mechanical systems, the elements have same force are said to be in parallel.
+The elements having same angular velocity in mechanical system should have analogous same voltage in electrical analogous system.
+Each node in the mechanical system corresponds to a closed loop in electrical system. The number of meshes in electrical analogous is same as that of the number of nodes in mechanical system. Hence the number of node voltage and system equations will be
+￼￼￼￼￼￼Electrical Analogous Circuit Design Using C
+-9-
+￼￼
+￼￼same as that of the number of velocities of nodes (moment of inertia) in mechanical systems.
+The mechanical driving force (torque) and passive elements connected to the node in mechanical system should be represented by analogous elements in a closed loop in analogous electrical system.
+The elements connected between two nodes (moment of inertia) in mechanical systems are represented as a common element between two meshes in electrical analogous system.
+￼￼TORQUE CURRENT ANALOGY:
+￼￼￼￼ITEM
+￼￼￼￼MECHANICAL SYSTEM
+￼￼￼￼￼ELECTRICAL SYSTEM
+￼￼INDEPENDENT VARIABLE(INPUT)
+￼￼￼￼￼￼￼￼￼￼￼TORQUE , T
+￼￼￼CURRENT, i
+￼￼￼￼￼￼￼￼￼￼￼DEPENDENT VARIABLE(OUTPUT)
+ANGULAR VELOCITY, ω
+￼￼VOLTAGE, v
+￼￼￼￼￼￼￼￼￼DISSIPATIVE ELEMENT
+￼￼￼￼ROTATIONAL COEFFICIENT DASHPOT , B
+￼￼￼CONDUCTANCE ,G=1/R
+￼￼￼￼￼￼￼￼￼￼￼￼STORAGE ELEMENT
+￼￼￼￼MOMENT OF INERTIA , J
+￼￼CAPACITANCE, C
+￼￼￼￼￼￼￼￼INVERSEOF INDUCTANCE, 1/L
+￼￼￼STIFFNESS OF SPRING, K
+￼￼￼￼￼￼￼￼￼￼￼￼￼PHYSICAL LAW
+NEWTON SECOND LAW, ∑T=0
+￼￼KIRCHOFF CURRENT LAW
+∑i=0
+￼￼￼￼￼OF
+￼￼￼￼CHANGING THE LEVEL OF INDEPENDENT VARIABLE
+￼￼￼￼GEAR
+￼￼￼TRANSFORMER
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼OF
+￼￼￼￼￼￼￼￼Electrical Analogous Circuit Design Using C
+-10-
+￼￼
+￼￼LIST OF BUILT-IN HEADER FILES INCLUDED
+￼￼￼￼￼￼Name
+￼￼￼￼￼stdio.h
+graphics.h
+Operation
+Includes all standard input/output functions
+￼￼￼￼￼￼￼conio.h
+Includes all console input/output functions
+Includes all graphics related functions
+Includes all interrupt related functions
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼Dos.h
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼SOME IMPORTANT USER DEFINED FUNCTIONS
+RealiseVolt()
+This function is responsible for synthesis of the Force-Voltage electrical equivalent analogous circuit for the designed mechanical modal.
+This function in turn calls the RealiseVoltLoopDivision() function
+RealiseVoltLoopDivision()
+The function of this method is to call the various user defined functions which places the electrical analogous elements in the design windows according to the developed logic.
+This function calls the following functions drawind h()
+drawcap v() drawi() drawe() drawresv() drawresh()
+drawindh()
+This subroutine is used to place a model inductor according to the passed coordinates values.
+￼￼￼￼￼￼￼￼Electrical Analogous Circuit Design Using C
+-11-
+￼￼
+￼￼drawresh() &amp; drawresv()
+These two functions are used to place a model resistor as per the values of coordinates passed horizontally and vertically respectively.
+drawcapv()
+This is used to place capacitor on the design area.
+RealiseCurrent()
+This function is responsible for obtaining Force-Current electrical equivalent analogous circuit. This functions is similar to realisevolt. It calls RealiseCurrentLoopDivision().
+RealiseCurrentLoopDivision()
+This function is similar to RealiseVoltLoopDivision() calling user defined functions to place the appropriate electrical equivalent analogs but according to a different logic.
+HomeWindowScan()
+Scans for a mouse click in the Home Page Window and passes the appropriate value to the click() function.
+ConfirmationScan()
+This function Scans for mouse click in the confirmation window and passes the appropriate value to the click2() function.
+TranslationScan() and RotationScan()
+This function passes appropriate value to the click() function after detecting a mouse click.
+Click()
+This function calls other functions based on the values passed to it by the different scan routines.
+￼￼Electrical Analogous Circuit Design Using C
+-12-
+￼￼
+￼￼USER DEFINED FILES
+About.cpp
+This file contains help() and intro() functions. These functions give the user an idea about the package and its functionalities. This aids the new user getting familiarized with the project.
+Screen.cpp
+This files contains functions necessary for the creation of windows like GUI screen. The window developed contains buttons for aided user interaction
+Gui.cpp
+This files is responsible for calling of the mouse interrupt through the user developed functions for mouse interface.
+This file contains the following sub routines.
+ShowMousePointer()
+To display mouse pointer on the user screen. It uses function 01h of INT 33h for this purpo se.
+ReadMousePointer()
+To read the current mouse coordinates of pointer. This uses function 03h of INT 33h to read coordinates as well as the status of buttons
+HideMousePointer()
+This function is to hide the mouse pointer from the screen. Useful while drawing in graphics mode. It uses function 02 of INT 33h.
+InitializeGraphics()
+This function is for graphics mode initialization. This function returns the appropriate error message if the graphics initialization fails.
+￼￼Electrical Analogous Circuit Design Using C
+-13-
+￼￼
+￼￼SALIENT FEATURES:
+The design of the project is centered on user friendliness and greater usage of the GUI concepts like mouse programming.
+The simulator provides user the power to virtually design the mechanical system and find its electrical analogous circuit in an easy manner.
+Very cost effective as it eliminates the need to implement the mechanical design for real and also aids in faster design.
+LIMITATIONS:
+Calculations of obtained electrical analogous circuit elements in terms of their values are not available currently.
+The designed system cannot be retrieved later for future reference.
+FUTURE ENHANCEMENTS:
+To overcome the limitation on the number of mass elements that can be placed in the design area by incorporating scrolling of the screen.
+To preserve the designed system and obtained analogous circuit for future.
+CONCLUSION:
+The developed project can be of immense help to the mechanical designers. The generation of equivalent electrical parameters aids in better and faster analysis of the designed mechanical systems. The software project is developed keeping in view user friendliness and ease of navigation by using GUI.
+￼￼￼￼￼￼￼￼￼Electrical Analogous Circuit Design Using C
+-14-
+￼￼
+￼￼REFERENCE:
+Byron S. Gottfried,” THEORY AND PROBLEMS OF PROGRAMMING WITH C”, Tata McGraw-Hill Edition, Second Edition.
+Norman S.Nise,” CONTROL SYSTEMS ENGINEERING”, John Wiley &amp; Sons,INC, Fourth Edition.
+Nagoor Kani,” CONTROL SYSTEMS”, RBA Publication, First Edition.
+￼￼￼￼￼Electrical Analogous Circuit Design Using C
+-15-
+￼￼
+￼￼SCREENSHOTS
+Home Page of Project
+￼￼Mechanical Translational Model Design
+￼￼￼Electrical Analogous Circuit Design Using C
+￼- 60-
+￼
+￼￼Force-Voltage Electrical Analogous Circuit
+￼Force-Current Electrical Analogous Circuit
+￼￼￼Electrical Analogous Circuit Design Using C
+￼- 61-
+￼</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
