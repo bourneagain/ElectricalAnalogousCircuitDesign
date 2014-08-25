@@ -28,323 +28,1762 @@
 
     <div class="container">
       <section id="main_content">
-        <p>R.SHYAM BE-SW EEE
-ELECTRICAL ANALOGOUS CIRCUIT DESIGN USING C
-PROJECT OBJECTIVE:
-“The true creator is necessity, which is the mother of invention”
--Plato
-Heretofore the mechanical designs were analyzed using cryptic mechanical models. So as a student of core electrical branch, I decided to use electrical analogy for mechanical designs for easier and better model analysis. This project's objective is to obtain equivalent electrical analogous circuit for the user designed mechanical systems aiming to be of aid to the mechanical engineers. The electrical analogous systems once obtained are far easier to work with than old mechanical designs. This project is written in popular C programming language keeping in mind user friendliness.</p>
 
-<p>￼￼￼￼LANGUAGE USED: COMPILER USED : PLATFORM USED:
-C Programming Language
-Turbo C++ Compiler, Version 3.0 MS DOS</p>
-
-<p>ABOUT THE PROJECT:
-The project acquaints the user with a Graphical User Interface (GUI) to help him bridge the gap between the conversions of Mechanical System designed virtually using this software to equivalent electrical analogous circuit for easier and better study of the mechanical design. Once obtained, the electrical analogy paves way for accurate and easier manipulation and further research into the development of designed mechanical design.
-￼￼
-￼￼INTRODUCTION:
-The program welcomes the user with a brief introduction about the software. The Home Screen acts like the home page of a website containing links to the two broad divisions of this package namely the Mechanical Translation and Mechanical Rotational Systems. When user moves the mouse pointer over the screen, help is provided to the user for better navigation through contextual help display at the bottom of the screen. The entire screen is designed to give the user a feel of déjà vu as it mimics the windows classic style. The usage of mouse programming for navigation is an example.
-The same screen characteristics are carried forward to subsequent screens too. In the Mechanical Translation screen the user views the screen divided into four sections, The Tools Palette, The Design Area, The Title Bar, The Menu Bar, and Help Bar.
-In the Tools Palette, buttons for placing mechanical design elements have been provided, namely Mass M, Spring K, Dash Pot B, Force F, B-Dir.
-The Design Area is the workplace where the designer can design the mechanical systems virtually using the concept of pick-n-place of the design elements from the tools palette.
-In the Menu Bar the user can choose the option of getting either Force-Voltage Equivalent Electrical Analogous Circuit or Force-Current Equivalent Electrical Analogous Circuit. The user is aided further by the display of Contextual Help at the bottom in help bar.
-In the Help Bar, the user is given onscreen contextual help as and when the user moves the cursor over the items on the screen. The user friendliness of the software is given prime importance right from the design stage itself.
-￼￼Electrical Analogous Circuit Design Using C
--1-
-￼￼
-￼￼CONCEPTS USED:
-￼Graphical User Interface (GUI)
-The selection of various software elements and other options can be done using virtual buttons designed and placed on the user screen. When the user clicks on the button, the function of the button is displayed in the help bar. This gives the user as to what and how the button’s function is to be used. The various graphics functions in C like rectangle(), circle() and so on as well as the user defined graphical functions are used logically for the construction of the user screen as well as being the backbone of circuit design aid. The GUI is an attractive feature in this project.
-Mouse Programming
-GUI and mouse go hand in hand. The mouse is used in the select screen to select the choices and to press the button. Also the user can position the design elements by using mouse. Mouse programming is done using int86() function of C programming language. The interrupt used in this program is INT 33H.
-Structure Concept
-As the entire concept of the project is logical graphic design, the coordinates of the design elements placed on the screen by the user are the only means of deriving any logics for further processing. In order to efficiently store and process coordinates of design elements, the coordinates are stored as separate structures. This paves way for easy manipulation and for the evolution into the desired electrical analogous circuit.
-Force-Voltage and Force-Current Analysis
-This analysis is used for obtaining electrical equivalent analogous circuits. The analysis is based on mapping between mechanical elements and electrical parameters such as resistance, inductance, capacitance as well as voltage and current sources.
-￼￼Electrical Analogous Circuit Design Using C
--2-
-￼￼
-￼￼IDEA:
-A System remains analogous as long as the differential equations governing the system or transfer functions are of identical form. The electrical analogue of any other kind of system is of great importance since it is easier to construct electrical models and analyze them.
-The three basic elements Mass, Dashpot and Spring that are used in modeling Mechanical Translational systems are analogous to Resistance, Inductance and Capacitance of electrical systems. The input force in mechanical system is analogous to either voltage source or current source in electrical systems. The output velocity in mechanical system is analogous to either current or voltage in an element in electrical system. Since the electrical system has two types of inputs either voltage or current source, there are two types of analogies namely Force-Voltage Analogy and Force-Current Analogy.
-Our idea is to derive the electrical equivalent for the user designed mechanical model. The basic logic behind the conversion follows the mapping of the mechanical realizable models to the equivalent Electrical Model.
-￼￼Electrical Analogous Circuit Design Using C
--3-
-￼￼
-￼￼Representation of SUSPENSION SYSTEM using PHYSICAL MODEL
-￼ANALOGOUS SYSTEMS
-Force – Voltage Analogous Circuit Force - Current Analogous Circuit
-￼￼￼￼￼Electrical Analogous Circuit Design Using C
--4-
-￼￼
-￼￼￼￼Electrical Analogous Circuit Design Using C
-￼￼MECHANICAL TRANSLATIONAL &amp; ROTATIONAL SYSTEMS:
-It is possible to make electrical and mechanical systems using analogs. An analogous
-electrical and mechanical system will have differential equations of the same form.
-MECHANICAL TRANSLATIONAL SYSTEMS:
-The model of Mechanical Translational Systems can be obtained by using three basic elements Mass, Spring and Dashpot. The weight of the mechanical system is represented by the Element Mass and it is assumed to be concentrated at the center of the body. The elastic deformation of the body can be represented by a spring. The friction existing in a mechanical system can be represented by a dashpot.
-MECHANICAL ROTATIONAL SYSTEMS:
-The model of Mechanical Rotational Systems can be obtained by using three basic elements moment of inertia of Mass, Dashpot with rotational frictional coefficient and Torsion Spring with stiffness. The weight of the mechanical system is represented by the Moment Of Inertia of the mass and it is assumed to be concentrated at the center of the body. The elastic deformation of the body can be represented by a Torsion Spring. The friction existing in a mechanical system can be represented by a dashpot
-ELECTRICAL ANALOGOUS OF MECHANICAL TRANSLATIONAL SYSTEMS:
-Some points to be kept in mind while deriving electrical analogies,
-System remains analogous as long as the differential equations governing the system or transfer functions are of identical form.
-The electrical analogue of any other kind of system is of great importance since it is easier to construct electrical models and analyze them.
-The input force in mechanical system is analogous to either voltage source or current source in electrical systems. The output velocity in mechanical system is analogous to either current or voltage in an element in electrical system.
-￼￼￼￼￼Electrical Analogous Circuit Design Using C
--5-
-￼￼
-￼￼GUIDELINES TO OBTAIN ELECTRICAL ANALOGOUS SYSTEMS BASED ON FORCE VOLTAGE ANALOGY:
-In electrical systems the elements in series will have same current, likewise in mechanical systems, the elements have same velocity are said to be in series.
-The elements having same velocity in mechanical system should have analogous same current in electrical analogous system.
-Each node in the mechanical system corresponds to a closed loop in electrical system. The number of meshes in electrical analogous is same as that of the number of nodes in mechanical system. Hence the number of mesh currents and system equations will be same as that of the number of velocities of nodes in mechanical systems.
-The mechanical driving force and passive elements connected to the node in mechanical system should be represented by analogous elements in a closed loop in analogous electrical system.
-The elements connected between two nodes in mechanical systems are represented as a common element between two meshes in electrical analogous system.
-FORCE VOLTAGE ANALOGY:
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼ITEM
-DISSIPATIVE ELEMENT
-MECHANICAL SYSTEM
-ELECTRICAL SYSTEM
-￼￼￼￼￼￼￼￼￼INDEPENDENT
-￼FORCE ,f
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼FRICTIONAL COEFFICIENT
-VOLTAGE, e
-￼￼￼VARIABLE(INPUT)
-￼￼￼￼￼￼￼￼DEPENDENT VARIABLE(OUTPUT)
-VELOCITY ,v
-CURRENT, i
-￼￼￼OF
-￼￼RESISTANCE , R
-￼￼￼￼￼￼DASHPOT , B
-￼￼￼￼￼￼￼￼￼￼￼￼￼STORAGE ELEMENT
-MASS, M
-INDUCTANCE, L
-￼￼￼￼￼￼￼￼￼￼￼INVERSE CAPACITANCE, 1/C
-￼￼￼STIFFNESS OF SPRING, K
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼OF
-￼￼￼￼Electrical Analogous Circuit Design Using C
--6-
-￼￼
-￼￼￼￼￼￼￼PHYSICAL LAW
-￼NEWTON SECOND LAW, ∑F=0.
-￼￼￼￼￼KIRCHOFF VOLTAGE LAW, ∑V=0.
-￼￼￼CHANGING THE LEVEL OF
-￼￼￼OF
-￼￼￼￼￼LEVER
-￼￼￼TRANSFORMER
-￼￼INDEPENDENT VARIABLE
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼GUIDELINES TO OBTAIN ELECTRICAL ANALOGOUS SYSTEMS BASED ON FORCE CURRENT ANALOGY:
-In electrical systems the elements in parallel will have same voltage, likewise in mechanical systems, the elements have same force are said to be in parallel.
-The elements having same velocity in mechanical system should have analogous same voltage in electrical analogous system.
-Each node in the mechanical system corresponds to a closed loop in electrical system. The number of meshes in electrical analogous is same as that of the number of nodes in mechanical system. Hence the number of node voltage and system equations will be same as that of the number of velocities of nodes in mechanical systems.
-The mechanical driving force and passive elements connected to the node in mechanical system should be represented by analogous elements in a closed loop in analogous electrical system.
-The elements connected between two nodes in mechanical systems are represented as a common element between two meshes in electrical analogous system.
-FORCE CURRENT ANALOGY:
-￼￼￼￼￼￼￼￼￼￼ITEM
-￼MECHANICAL SYSTEM
-￼￼￼￼￼ELECTRICAL SYSTEM
-￼￼INDEPENDENT
-￼￼￼￼￼￼￼￼￼FORCE ,f
-￼￼￼CURRENT, i
-￼￼VARIABLE(INPUT)
-￼￼￼￼￼￼￼￼￼￼DEPENDENT VARIABLE(OUTPUT)
-￼￼￼￼￼VELOCITY ,v
-￼￼￼VOLTAGE, v
-￼￼￼￼￼￼￼￼￼￼￼Electrical Analogous Circuit Design Using C
--7-
-￼￼
-￼￼￼￼￼￼￼￼￼￼￼￼￼FRICTIONAL COEFFICIENT DASHPOT , B
-OF
-￼DISSIPATIVE ELEMENT
-CONDUCTANCE ,G=1/R
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼STORAGE ELEMENT
-MASS, M
-CAPACITANCE, C
-￼￼￼￼￼￼￼￼￼￼￼STIFFNESS OF SPRING, K
-INVERSEOF
-￼￼￼￼INDUCTANCE, 1/L
-￼￼￼￼￼￼￼￼￼KIRCHOFF CURRENT LAW, ∑i=0
-￼￼￼￼PHYSICAL LAW
-NEWTON SECOND LAW, ∑F=0.
-￼￼￼￼￼￼￼￼￼￼CHANGING THE LEVEL OF INDEPENDENT VARIABLE
-OF
-￼￼￼LEVER
-TRANSFORMER
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼ELECTRICAL ANALOGOUS OF MECHANICAL ROTATIONAL SYSTEMS:
-We have in similar fashion analogs for rotational systems too. The following provides the necessary guidelines for conversion.
-GUIDELINES TO OBTAIN ELECTRICAL ANALOGOUS ROTATIONAL SYSTEMS BASED ON TORQUE VOLTAGE ANALOGY:
-In electrical systems the elements in series will have same current, likewise in mechanical systems, the elements have same angular velocity are said to be in series. The elements having same angular velocity in mechanical system should have analogous same current in electrical analogous system.
-Each node in the mechanical system corresponds to a closed loop in electrical system. The number of meshes in electrical analogous is same as that of the number of nodes in mechanical system. Hence the number of mesh currents and system equations will be same as that of the number of velocities of nodes in mechanical systems.
-The mechanical driving force (torque) and passive elements connected to the node in mechanical system should be represented by analogous elements in a closed loop in analogous electrical system.
-￼￼￼￼￼￼￼Electrical Analogous Circuit Design Using C
--8-
-￼￼
-￼￼The elements connected between two nodes (moment of inertia) in mechanical systems are represented as a common element between two meshes in electrical analogous system.
-TORQUE VOLTAGE ANALOGY:
-￼￼￼￼￼￼ITEM
-￼￼￼￼MECHANICAL SYSTEM
-￼￼￼￼￼ELECTRICAL SYSTEM
-￼￼INDEPENDENT VARIABLE(INPUT)
-￼￼￼￼￼￼￼￼￼￼￼TORQUE, T
-￼￼￼VOLTAGE, e
-￼￼￼￼￼￼￼￼￼￼￼DEPENDENT VARIABLE(OUTPUT)
-ANGULAR VELOCITY, ω
-￼￼CURRENT, i
-￼￼￼￼￼￼￼￼￼￼DISSIPATIVE ELEMENT
-￼￼￼￼ROTATIONAL COEFFICIENT OF
-￼￼￼RESISTANCE , R
-￼￼DASHPOT , B
-￼￼￼￼￼￼￼￼￼￼￼￼STORAGE ELEMENT
-￼￼￼￼MOMENT OF INERTIA, J
-￼￼INDUCTANCE, L
-￼￼￼￼￼￼￼￼￼￼INVERSEOF
-￼￼STIFFNESS OF SPRING, K
-￼￼CAPACITANCE, 1/C
-￼￼￼￼￼￼￼￼￼PHYSICAL LAW
-NEWTON SECOND LAW, ∑T=0
-￼￼￼￼KIRCHOFF VOLTAGE LAW, ∑v=0
-￼￼CHANGING THE LEVEL OF
-￼￼￼OF
-￼￼￼￼￼￼GEAR
-￼￼￼TRANSFORMER
-￼￼INDEPENDENT VARIABLE
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼GUIDELINES TO OBTAIN ELECTRICAL ANALOGOUS SYSTEMS BASED ON TORQUE CURRENT ANALOGY:
-In electrical systems the elements in parallel will have same voltage, likewise in mechanical systems, the elements have same force are said to be in parallel.
-The elements having same angular velocity in mechanical system should have analogous same voltage in electrical analogous system.
-Each node in the mechanical system corresponds to a closed loop in electrical system. The number of meshes in electrical analogous is same as that of the number of nodes in mechanical system. Hence the number of node voltage and system equations will be
-￼￼￼￼￼￼Electrical Analogous Circuit Design Using C
--9-
-￼￼
-￼￼same as that of the number of velocities of nodes (moment of inertia) in mechanical systems.
-The mechanical driving force (torque) and passive elements connected to the node in mechanical system should be represented by analogous elements in a closed loop in analogous electrical system.
-The elements connected between two nodes (moment of inertia) in mechanical systems are represented as a common element between two meshes in electrical analogous system.
-￼￼TORQUE CURRENT ANALOGY:
-￼￼￼￼ITEM
-￼￼￼￼MECHANICAL SYSTEM
-￼￼￼￼￼ELECTRICAL SYSTEM
-￼￼INDEPENDENT VARIABLE(INPUT)
-￼￼￼￼￼￼￼￼￼￼￼TORQUE , T
-￼￼￼CURRENT, i
-￼￼￼￼￼￼￼￼￼￼￼DEPENDENT VARIABLE(OUTPUT)
-ANGULAR VELOCITY, ω
-￼￼VOLTAGE, v
-￼￼￼￼￼￼￼￼￼DISSIPATIVE ELEMENT
-￼￼￼￼ROTATIONAL COEFFICIENT DASHPOT , B
-￼￼￼CONDUCTANCE ,G=1/R
-￼￼￼￼￼￼￼￼￼￼￼￼STORAGE ELEMENT
-￼￼￼￼MOMENT OF INERTIA , J
-￼￼CAPACITANCE, C
-￼￼￼￼￼￼￼￼INVERSEOF INDUCTANCE, 1/L
-￼￼￼STIFFNESS OF SPRING, K
-￼￼￼￼￼￼￼￼￼￼￼￼￼PHYSICAL LAW
-NEWTON SECOND LAW, ∑T=0
-￼￼KIRCHOFF CURRENT LAW
-∑i=0
-￼￼￼￼￼OF
-￼￼￼￼CHANGING THE LEVEL OF INDEPENDENT VARIABLE
-￼￼￼￼GEAR
-￼￼￼TRANSFORMER
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼OF
-￼￼￼￼￼￼￼￼Electrical Analogous Circuit Design Using C
--10-
-￼￼
-￼￼LIST OF BUILT-IN HEADER FILES INCLUDED
-￼￼￼￼￼￼Name
-￼￼￼￼￼stdio.h
-graphics.h
-Operation
-Includes all standard input/output functions
-￼￼￼￼￼￼￼conio.h
-Includes all console input/output functions
-Includes all graphics related functions
-Includes all interrupt related functions
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼Dos.h
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼SOME IMPORTANT USER DEFINED FUNCTIONS
-RealiseVolt()
-This function is responsible for synthesis of the Force-Voltage electrical equivalent analogous circuit for the designed mechanical modal.
-This function in turn calls the RealiseVoltLoopDivision() function
-RealiseVoltLoopDivision()
-The function of this method is to call the various user defined functions which places the electrical analogous elements in the design windows according to the developed logic.
-This function calls the following functions drawind h()
-drawcap v() drawi() drawe() drawresv() drawresh()
-drawindh()
-This subroutine is used to place a model inductor according to the passed coordinates values.
-￼￼￼￼￼￼￼￼Electrical Analogous Circuit Design Using C
--11-
-￼￼
-￼￼drawresh() &amp; drawresv()
-These two functions are used to place a model resistor as per the values of coordinates passed horizontally and vertically respectively.
-drawcapv()
-This is used to place capacitor on the design area.
-RealiseCurrent()
-This function is responsible for obtaining Force-Current electrical equivalent analogous circuit. This functions is similar to realisevolt. It calls RealiseCurrentLoopDivision().
-RealiseCurrentLoopDivision()
-This function is similar to RealiseVoltLoopDivision() calling user defined functions to place the appropriate electrical equivalent analogs but according to a different logic.
-HomeWindowScan()
-Scans for a mouse click in the Home Page Window and passes the appropriate value to the click() function.
-ConfirmationScan()
-This function Scans for mouse click in the confirmation window and passes the appropriate value to the click2() function.
-TranslationScan() and RotationScan()
-This function passes appropriate value to the click() function after detecting a mouse click.
-Click()
-This function calls other functions based on the values passed to it by the different scan routines.
-￼￼Electrical Analogous Circuit Design Using C
--12-
-￼￼
-￼￼USER DEFINED FILES
-About.cpp
-This file contains help() and intro() functions. These functions give the user an idea about the package and its functionalities. This aids the new user getting familiarized with the project.
-Screen.cpp
-This files contains functions necessary for the creation of windows like GUI screen. The window developed contains buttons for aided user interaction
-Gui.cpp
-This files is responsible for calling of the mouse interrupt through the user developed functions for mouse interface.
-This file contains the following sub routines.
-ShowMousePointer()
-To display mouse pointer on the user screen. It uses function 01h of INT 33h for this purpo se.
-ReadMousePointer()
-To read the current mouse coordinates of pointer. This uses function 03h of INT 33h to read coordinates as well as the status of buttons
-HideMousePointer()
-This function is to hide the mouse pointer from the screen. Useful while drawing in graphics mode. It uses function 02 of INT 33h.
-InitializeGraphics()
-This function is for graphics mode initialization. This function returns the appropriate error message if the graphics initialization fails.
-￼￼Electrical Analogous Circuit Design Using C
--13-
-￼￼
-￼￼SALIENT FEATURES:
-The design of the project is centered on user friendliness and greater usage of the GUI concepts like mouse programming.
-The simulator provides user the power to virtually design the mechanical system and find its electrical analogous circuit in an easy manner.
-Very cost effective as it eliminates the need to implement the mechanical design for real and also aids in faster design.
-LIMITATIONS:
-Calculations of obtained electrical analogous circuit elements in terms of their values are not available currently.
-The designed system cannot be retrieved later for future reference.
-FUTURE ENHANCEMENTS:
-To overcome the limitation on the number of mass elements that can be placed in the design area by incorporating scrolling of the screen.
-To preserve the designed system and obtained analogous circuit for future.
-CONCLUSION:
-The developed project can be of immense help to the mechanical designers. The generation of equivalent electrical parameters aids in better and faster analysis of the designed mechanical systems. The software project is developed keeping in view user friendliness and ease of navigation by using GUI.
-￼￼￼￼￼￼￼￼￼Electrical Analogous Circuit Design Using C
--14-
-￼￼
-￼￼REFERENCE:
-Byron S. Gottfried,” THEORY AND PROBLEMS OF PROGRAMMING WITH C”, Tata McGraw-Hill Edition, Second Edition.
-Norman S.Nise,” CONTROL SYSTEMS ENGINEERING”, John Wiley &amp; Sons,INC, Fourth Edition.
-Nagoor Kani,” CONTROL SYSTEMS”, RBA Publication, First Edition.
-￼￼￼￼￼Electrical Analogous Circuit Design Using C
--15-
-￼￼
-￼￼SCREENSHOTS
-Home Page of Project
-￼￼Mechanical Translational Model Design
-￼￼￼Electrical Analogous Circuit Design Using C
-￼- 60-
-￼
-￼￼Force-Voltage Electrical Analogous Circuit
-￼Force-Current Electrical Analogous Circuit
-￼￼￼Electrical Analogous Circuit Design Using C
-￼- 61-
-￼</p>
-      </section>
+		<div class="page" title="Page 1">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Arial Black'; color: rgb(31.000000%, 38.400000%, 15.700000%)">R.SHYAM BE-SW EEE </span></p>
+					<p>
+						<span style="font-size: 19.000000pt; font-family: 'Cambria,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">ELECTRICAL ANALOGOUS CIRCUIT DESIGN USING C </span></p>
+					<p>
+						<span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">PROJECT OBJECTIVE: </span></p>
+					<p>
+						<span style="font-size: 9.000000pt; font-family: 'MS Reference Sans Serif'">&ldquo;The true creator is necessity, which is the mother of invention&rdquo; </span></p>
+					<p>
+						<span style="font-size: 9.000000pt; font-family: 'MS Reference Sans Serif'">-Plato </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">Heretofore the mechanical designs were analyzed using cryptic mechanical models. So as a student of core electrical branch, I decided to use electrical analogy for mechanical designs for easier and better model analysis. This project&#39;s objective is to obtain equivalent electrical analogous circuit for the user designed mechanical systems aiming to be of aid to the mechanical engineers. The electrical analogous systems once obtained are far easier to work with than old mechanical designs. This project is written in popular C programming language keeping in mind user friendliness. </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Arial Black'; color: rgb(31.000000%, 38.400000%, 15.700000%)">LANGUAGE USED: COMPILER USED : PLATFORM USED: </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">C Programming Language<br />
+						Turbo C++ Compiler, Version 3.0 MS DOS </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">ABOUT THE PROJECT: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The project acquaints the user with a Graphical User Interface (GUI) to help him bridge the gap between the conversions of Mechanical System designed virtually using this software to equivalent electrical analogous circuit for easier and better study of the mechanical design. Once obtained, the electrical analogy paves way for accurate and easier manipulation and further research into the development of designed mechanical design. </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 2">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(22.700000%, 34.500000%, 11.000000%)">INTRODUCTION: </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The program welcomes the user with a brief introduction about the software. The </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Home Screen </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">acts like the home page of a website containing links to the two broad divisions of this package namely the </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Mechanical Translation </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">and </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Mechanical Rotational Systems</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">. When user moves the mouse pointer over the screen, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">help </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">is provided to the user for better navigation through contextual help display at the bottom of the screen. The entire screen is designed to give the user a feel of déjà vu as it mimics the windows classic style. The usage of mouse programming for navigation is an example. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The same screen characteristics are carried forward to subsequent screens too. In the Mechanical Translation screen the user views the screen divided into four sections, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">The Tools Palette, The Design Area, The Title Bar, The Menu Bar</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">, and </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Help Bar</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">In the </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Tools Palette</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">, buttons for placing mechanical design elements have been provided, namely Mass M, Spring K, Dash Pot B, Force F, B-Dir. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Design Area </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">is the workplace where the designer can design the mechanical systems virtually using the concept of pick-n-place of the design elements from the tools palette. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">In the </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Menu Bar </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">the user can choose the option of getting either Force-Voltage Equivalent Electrical Analogous Circuit or Force-Current Equivalent Electrical Analogous Circuit. The user is aided further by the display of </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Contextual Help </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">at the bottom in help bar. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">In the </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Help Bar</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">, the user is given </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">onscreen </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">contextual help as and when the user moves the cursor over the items on the screen. The user friendliness of the software is given prime importance right from the design stage itself. </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">1- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 3">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(22.700000%, 34.500000%, 11.000000%)">CONCEPTS USED: </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">Graphical User Interface (GUI) </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The selection of various software elements and other options can be done using virtual buttons designed and placed on the user screen. When the user clicks on the button, the function of the button is displayed in the help bar. This gives the user as to what and </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">how the button&rsquo;s function is to be used. The various graphics functions </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">in C like rectangle(), circle() and so on as well as the user defined graphical functions are used logically for the construction of the user screen as well as being the backbone of circuit design aid. The GUI is an attractive feature in this project. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">Mouse Programming </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">GUI and mouse go hand in hand. The mouse is used in the select screen to select the choices and to press the button. Also the user can position the design elements by using mouse. Mouse programming is done using </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">int86() </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">function of C programming language. The interrupt used in this program is </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">INT 33H</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">Structure Concept </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">As the entire concept of the project is logical graphic design, the coordinates of the design elements placed on the screen by the user are the only means of deriving any logics for further processing. In order to efficiently store and process coordinates of design elements, the coordinates are stored as separate structures. This paves way for easy manipulation and for the evolution into the desired electrical analogous circuit. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">Force-Voltage and Force-Current Analysis </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This analysis is used for obtaining electrical equivalent analogous circuits. The analysis is based on mapping between mechanical elements and electrical parameters such as resistance, inductance, capacitance as well as voltage and current sources. </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">2- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 4">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">IDEA: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">A System remains analogous as long as the differential equations governing the system or transfer functions are of identical form. The electrical analogue of any other kind of system is of great importance since it is easier to construct electrical models and analyze them. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The three basic elements </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Mass, Dashpot </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">and </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Spring </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">that are used in modeling Mechanical Translational systems are analogous to </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Resistance, Inductance </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">and </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Capacitance </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">of electrical systems. The input force in mechanical system is analogous to either voltage source or current source in electrical systems. The output velocity in mechanical system is analogous to either current or voltage in an element in electrical system. Since the electrical system has two types of inputs either voltage or current source, there are two types of analogies namely </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Force-Voltage Analogy </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">and </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(21.200000%, 37.300000%, 56.900000%)">Force-Current Analogy. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">Our idea is to derive the electrical equivalent for the user designed mechanical model. The basic logic behind the conversion follows the mapping of the mechanical realizable models to the equivalent Electrical Model. </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">3- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 5">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(58.000000%, 21.200000%, 20.400000%)">Representation of SUSPENSION SYSTEM using PHYSICAL MODEL </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(58.000000%, 21.200000%, 20.400000%)">ANALOGOUS SYSTEMS </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,BoldItalic'; color: rgb(31.000000%, 38.400000%, 15.700000%)">Force </span><span style="font-size: 14.000000pt; font-family: 'Times New Roman,BoldItalic'; color: rgb(31.000000%, 38.400000%, 15.700000%)">&ndash; </span><span style="font-size: 14.000000pt; font-family: 'Times New Roman,BoldItalic'; color: rgb(31.000000%, 38.400000%, 15.700000%)">Voltage Analogous Circuit Force - Current Analogous Circuit </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">4- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 6">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 7">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(58.000000%, 21.200000%, 20.400000%)">MECHANICAL TRANSLATIONAL &amp; ROTATIONAL SYSTEMS</span><span style="font-size: 14.000000pt; font-family: 'Times New Roman'; color: rgb(58.000000%, 21.200000%, 20.400000%)">:</span><br />
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">It is possible to make electrical and mechanical systems using </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(31.000000%, 50.600000%, 74.100000%)">analogs</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'; color: rgb(31.000000%, 50.600000%, 74.100000%)">. </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">An analogous </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">electrical and mechanical system will have differential equations of the same form. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">MECHANICAL TRANSLATIONAL SYSTEMS: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The model of Mechanical Translational Systems can be obtained by using three basic elements </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(55.300000%, 70.200000%, 88.600000%)">Mass</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(55.300000%, 70.200000%, 88.600000%)">Spring </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">and </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(55.300000%, 70.200000%, 88.600000%)">Dashpot</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">. The weight of the mechanical system is represented by the </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(55.300000%, 70.200000%, 88.600000%)">Element Mass </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">and it is assumed to be concentrated at the center of the body. The elastic deformation of the body can be represented by a spring. The friction existing in a mechanical system can be represented by a dashpot. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">MECHANICAL ROTATIONAL SYSTEMS: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The model of Mechanical Rotational Systems can be obtained by using three basic elements moment of inertia of </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(55.300000%, 70.200000%, 88.600000%)">Mass</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(55.300000%, 70.200000%, 88.600000%)">Dashpot </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">with rotational frictional coefficient and </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(55.300000%, 70.200000%, 88.600000%)">Torsion Spring </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">with stiffness. The weight of the mechanical system is represented by the </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman,Italic'; color: rgb(55.300000%, 70.200000%, 88.600000%)">Moment Of Inertia </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">of the mass and it is assumed to be concentrated at the center of the body. The elastic deformation of the body can be represented by a Torsion Spring. The friction existing in a mechanical system can be represented by a dashpot </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">ELECTRICAL ANALOGOUS OF MECHANICAL TRANSLATIONAL SYSTEMS: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">Some points to be kept in mind while deriving electrical analogies, </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">System remains analogous as long as the differential equations governing the system or transfer functions are of identical form. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The electrical analogue of any other kind of system is of great importance since it is easier to construct electrical models and analyze them. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The input force in mechanical system is analogous to either voltage source or current source in electrical systems. The output velocity in mechanical system is analogous to either current or voltage in an element in electrical system. </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">5- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 8">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">GUIDELINES TO OBTAIN ELECTRICAL ANALOGOUS SYSTEMS BASED ON FORCE VOLTAGE ANALOGY: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">In electrical systems the elements in series will have same current, likewise in mechanical systems, the elements have same velocity are said to be in series.<br />
+						The elements having same velocity in mechanical system should have analogous same current in electrical analogous system. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">Each node in the mechanical system corresponds to a closed loop in electrical system. The number of meshes in electrical analogous is same as that of the number of nodes in mechanical system. Hence the number of mesh currents and system equations will be same as that of the number of velocities of nodes in mechanical systems.<br />
+						The mechanical driving force and passive elements connected to the node in mechanical system should be represented by analogous elements in a closed loop in analogous electrical system.<br />
+						The elements connected between two nodes in mechanical systems are represented as a common element between two meshes in electrical analogous system. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">FORCE VOLTAGE ANALOGY: </span></p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">ITEM </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">DISSIPATIVE ELEMENT </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">MECHANICAL SYSTEM </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">ELECTRICAL SYSTEM </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">INDEPENDENT </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">FORCE ,f </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">FRICTIONAL COEFFICIENT </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">VOLTAGE, e </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">VARIABLE(INPUT) </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">DEPENDENT VARIABLE(OUTPUT) </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">VELOCITY ,v </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">CURRENT, i </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">OF </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">RESISTANCE , R </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">DASHPOT , B </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">STORAGE ELEMENT </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">MASS, M </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">INDUCTANCE, L </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">INVERSE CAPACITANCE, 1/C </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">STIFFNESS OF SPRING, K </span></p>
+					</div>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">OF </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">6- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 9">
+			<table style="border-collapse: collapse">
+				<colgroup>
+					<col style="width: 32.631251%" />
+					<col style="width: 1.562532%" />
+					<col style="width: 34.660568%" />
+					<col style="width: 1.089510%" />
+					<col style="width: 1.253769%" />
+					<col style="width: 27.788751%" />
+					<col style="width: 1.013619%" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<td style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.812749%, 58.565737%, 27.091633%); border-right-width: 6.030000pt; border-right-color: rgb(96.551724%, 55.172414%, 24.137931%); border-bottom-width: 6.000000pt; border-bottom-color: rgb(98.654709%, 84.753363%, 73.991031%); border-left-width: 6.000000pt; border-left-color: rgb(96.428571%, 57.142857%, 25.000000%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">PHYSICAL LAW </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.761134%, 58.704453%, 27.125506%); border-right-width: 1.500000pt; border-right-color: rgb(96.551724%, 58.620690%, 26.724138%); border-bottom-width: 6.000000pt; border-bottom-color: rgb(94.117647%, 61.764706%, 32.352941%); border-left-width: 6.030000pt; border-left-color: rgb(96.551724%, 55.172414%, 24.137931%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">NEWTON SECOND LAW, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">&sum;</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">F=0. </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.850394%, 58.661417%, 27.165354%); border-right-width: 0.750000pt; border-right-color: rgb(96.888889%, 58.666667%, 27.111111%); border-bottom-width: 6.000000pt; border-bottom-color: rgb(96.666667%, 56.666667%, 26.666667%); border-left-width: 1.500000pt; border-left-color: rgb(96.551724%, 58.620690%, 26.724138%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">KIRCHOFF VOLTAGE LAW, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">&sum;</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">V=0. </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 6.000000pt; border-top-color: rgb(98.654709%, 84.753363%, 73.991031%); border-right-width: 6.030000pt; border-right-color: rgb(98.757764%, 83.850932%, 70.807453%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(98.136646%, 83.850932%, 71.428571%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">CHANGING THE LEVEL OF </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 6.000000pt; border-top-color: rgb(94.117647%, 61.764706%, 32.352941%); border-right-width: 1.500000pt; border-right-color: rgb(96.694215%, 58.677686%, 27.272727%); border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.030000pt; border-left-color: rgb(98.529412%, 82.352941%, 69.117647%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">OF </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 6.000000pt; border-top-color: rgb(96.666667%, 56.666667%, 26.666667%); border-right-width: 0.750000pt; border-right-color: rgb(96.721311%, 58.606557%, 27.049180%); border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.694215%, 58.677686%, 27.272727%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.030000pt; border-left-color: rgb(98.994975%, 84.422111%, 72.864322%)">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">LEVER </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.850394%, 58.267717%, 26.771654%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.850394%, 58.267717%, 26.771654%)">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">TRANSFORMER </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.750000pt; border-right-color: rgb(96.862745%, 58.823529%, 27.450980%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 6.030000pt; border-right-color: rgb(98.101266%, 82.911392%, 70.886076%); border-bottom-width: 6.750000pt; border-bottom-color: rgb(98.507463%, 85.074627%, 74.129353%); border-left-width: 6.000000pt; border-left-color: rgb(98.089172%, 82.802548%, 70.700637%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">INDEPENDENT VARIABLE </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.694215%, 58.677686%, 27.272727%); border-bottom-width: 6.750000pt; border-bottom-color: rgb(93.333333%, 60.000000%, 33.333333%); border-left-width: 6.030000pt; border-left-color: rgb(98.484848%, 81.818182%, 68.939394%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.750000pt; border-right-color: rgb(96.721311%, 58.606557%, 27.049180%); border-bottom-width: 6.750000pt; border-bottom-color: rgb(96.296296%, 55.555556%, 25.925926%); border-left-width: 1.500000pt; border-left-color: rgb(96.694215%, 58.677686%, 27.272727%)">
+							&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">GUIDELINES TO OBTAIN ELECTRICAL ANALOGOUS SYSTEMS BASED ON FORCE CURRENT ANALOGY: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">In electrical systems the elements in parallel will have same voltage, likewise in mechanical systems, the elements have same force are said to be in parallel.<br />
+						The elements having same velocity in mechanical system should have analogous same voltage in electrical analogous system. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">Each node in the mechanical system corresponds to a closed loop in electrical system. The number of meshes in electrical analogous is same as that of the number of nodes in mechanical system. Hence the number of node voltage and system equations will be same as that of the number of velocities of nodes in mechanical systems.<br />
+						The mechanical driving force and passive elements connected to the node in mechanical system should be represented by analogous elements in a closed loop in analogous electrical system.<br />
+						The elements connected between two nodes in mechanical systems are represented as a common element between two meshes in electrical analogous system. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">FORCE CURRENT ANALOGY: </span></p>
+				</div>
+			</div>
+			<table style="border-collapse: collapse">
+				<colgroup>
+					<col style="width: 31.661193%" />
+					<col style="width: 1.754423%" />
+					<col style="width: 33.887064%" />
+					<col style="width: 1.114525%" />
+					<col style="width: 1.271321%" />
+					<col style="width: 29.278525%" />
+					<col style="width: 1.032948%" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<td style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.825397%, 58.730159%, 27.380952%); border-right-width: 6.000000pt; border-right-color: rgb(96.551724%, 58.620690%, 24.137931%); border-bottom-width: 2.250000pt; border-bottom-color: rgb(96.825397%, 58.730159%, 27.380952%); border-left-width: 6.000000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">ITEM </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.747967%, 58.536585%, 27.235772%); border-right-width: 1.500000pt; border-right-color: rgb(96.666667%, 58.333333%, 26.666667%); border-bottom-width: 2.250000pt; border-bottom-color: rgb(96.721311%, 58.606557%, 27.459016%); border-left-width: 6.000000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">MECHANICAL SYSTEM </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.850394%, 58.661417%, 27.165354%); border-right-width: 0.750000pt; border-right-color: rgb(96.680498%, 58.506224%, 27.385892%); border-bottom-width: 2.250000pt; border-bottom-color: rgb(96.812749%, 58.565737%, 27.091633%); border-left-width: 1.500000pt; border-left-color: rgb(96.666667%, 58.333333%, 26.666667%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">ELECTRICAL SYSTEM </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 2.250000pt; border-top-color: rgb(96.825397%, 58.730159%, 27.380952%); border-right-width: 6.000000pt; border-right-color: rgb(99.033816%, 85.024155%, 73.913043%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(98.351648%, 83.516484%, 72.527473%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">INDEPENDENT </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 2.250000pt; border-top-color: rgb(96.721311%, 58.606557%, 27.459016%); border-right-width: 1.500000pt; border-right-color: rgb(96.226415%, 58.490566%, 27.358491%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(98.958333%, 85.416667%, 74.479167%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 2.250000pt; border-top-color: rgb(96.812749%, 58.565737%, 27.091633%); border-right-width: 0.750000pt; border-right-color: rgb(96.803653%, 58.904110%, 27.397260%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.226415%, 58.490566%, 27.358491%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(99.115044%, 85.398230%, 73.893805%)">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">FORCE ,f </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.850394%, 58.267717%, 26.771654%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.850394%, 58.267717%, 26.771654%)">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">CURRENT, i </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.750000pt; border-right-color: rgb(96.862745%, 58.823529%, 27.450980%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 6.000000pt; border-right-color: rgb(98.636364%, 85.000000%, 74.090909%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.825397%, 58.730159%, 27.380952%); border-left-width: 6.000000pt; border-left-color: rgb(98.445596%, 84.455959%, 72.538860%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">VARIABLE(INPUT) </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.638655%, 58.823529%, 26.890756%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.747967%, 58.536585%, 27.235772%); border-left-width: 6.000000pt; border-left-color: rgb(98.598131%, 84.579439%, 73.831776%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.750000pt; border-right-color: rgb(96.666667%, 58.750000%, 27.083333%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.850394%, 58.661417%, 27.165354%); border-left-width: 1.500000pt; border-left-color: rgb(96.638655%, 58.823529%, 26.890756%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.825397%, 58.730159%, 27.380952%); border-right-width: 6.000000pt; border-right-color: rgb(96.666667%, 56.666667%, 26.666667%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.825397%, 58.730159%, 27.380952%); border-left-width: 6.000000pt; border-left-color: rgb(96.666667%, 56.666667%, 26.666667%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">DEPENDENT VARIABLE(OUTPUT) </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.747967%, 58.536585%, 27.235772%); border-right-width: 1.500000pt; border-right-color: rgb(96.747967%, 58.536585%, 26.829268%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.747967%, 58.536585%, 27.235772%); border-left-width: 6.000000pt; border-left-color: rgb(96.666667%, 56.666667%, 26.666667%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">VELOCITY ,v </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.850394%, 58.661417%, 27.165354%); border-right-width: 0.750000pt; border-right-color: rgb(96.761134%, 58.704453%, 27.125506%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.850394%, 58.661417%, 27.165354%); border-left-width: 1.500000pt; border-left-color: rgb(96.747967%, 58.536585%, 26.829268%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">VOLTAGE, v </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">7- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 10">
+			<div class="section">
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">FRICTIONAL COEFFICIENT DASHPOT , B </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">OF </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">DISSIPATIVE ELEMENT </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">CONDUCTANCE ,G=1/R </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">STORAGE ELEMENT </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">MASS, M </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">CAPACITANCE, C </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">STIFFNESS OF SPRING, K </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">INVERSEOF </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">INDUCTANCE, 1/L </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">KIRCHOFF CURRENT LAW, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">&sum;</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">i=0 </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">PHYSICAL LAW </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">NEWTON SECOND LAW, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">&sum;</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">F=0. </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">CHANGING THE LEVEL OF INDEPENDENT VARIABLE </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">OF </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">LEVER </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">TRANSFORMER </span></p>
+					</div>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">ELECTRICAL ANALOGOUS OF MECHANICAL ROTATIONAL SYSTEMS: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">We have in similar fashion analogs for rotational systems too. The following provides the necessary guidelines for conversion. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">GUIDELINES TO OBTAIN ELECTRICAL ANALOGOUS ROTATIONAL SYSTEMS BASED ON TORQUE VOLTAGE ANALOGY: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">In electrical systems the elements in series will have same current, likewise in mechanical systems, the elements have same angular velocity are said to be in series. The elements having same angular velocity in mechanical system should have analogous same current in electrical analogous system. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">Each node in the mechanical system corresponds to a closed loop in electrical system. The number of meshes in electrical analogous is same as that of the number of nodes in mechanical system. Hence the number of mesh currents and system equations will be same as that of the number of velocities of nodes in mechanical systems.<br />
+						The mechanical driving force (torque) and passive elements connected to the node in mechanical system should be represented by analogous elements in a closed loop in analogous electrical system. </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">8- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 11">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The elements connected between two nodes (moment of inertia) in mechanical systems are represented as a common element between two meshes in electrical analogous system. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">TORQUE VOLTAGE ANALOGY: </span></p>
+				</div>
+			</div>
+			<table style="border-collapse: collapse">
+				<colgroup>
+					<col style="width: 32.129625%" />
+					<col style="width: 2.197986%" />
+					<col style="width: 36.674842%" />
+					<col style="width: 1.100037%" />
+					<col style="width: 1.252414%" />
+					<col style="width: 26.645097%" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<td style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.825397%, 58.730159%, 27.380952%); border-right-width: 6.030000pt; border-right-color: rgb(96.428571%, 57.142857%, 25.000000%); border-bottom-width: 3.755000pt; border-bottom-color: rgb(97.382199%, 65.445026%, 38.743455%); border-left-width: 6.000000pt; border-left-color: rgb(96.296296%, 55.555556%, 25.925926%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">ITEM </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.747967%, 58.536585%, 27.235772%); border-right-width: 1.500000pt; border-right-color: rgb(96.521739%, 58.260870%, 26.956522%); border-bottom-width: 3.755000pt; border-bottom-color: rgb(96.598639%, 58.503401%, 27.210884%); border-left-width: 6.030000pt; border-left-color: rgb(96.428571%, 57.142857%, 25.000000%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">MECHANICAL SYSTEM </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="2" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.850394%, 58.661417%, 27.165354%); border-right-width: 4.500000pt; border-right-color: rgb(94.594595%, 56.756757%, 27.027027%); border-bottom-width: 3.755000pt; border-bottom-color: rgb(96.666667%, 58.666667%, 27.333333%); border-left-width: 1.500000pt; border-left-color: rgb(96.521739%, 58.260870%, 26.956522%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">ELECTRICAL SYSTEM </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="3" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 3.755000pt; border-top-color: rgb(97.382199%, 65.445026%, 38.743455%); border-right-width: 6.030000pt; border-right-color: rgb(98.314607%, 84.269663%, 72.471910%); border-bottom-width: 2.250000pt; border-bottom-color: rgb(98.461538%, 76.410256%, 58.461538%); border-left-width: 6.000000pt; border-left-color: rgb(98.305085%, 84.180791%, 71.751412%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">INDEPENDENT VARIABLE(INPUT) </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 3.755000pt; border-top-color: rgb(96.598639%, 58.503401%, 27.210884%); border-right-width: 1.500000pt; border-right-color: rgb(96.396396%, 58.558559%, 27.027027%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.030000pt; border-left-color: rgb(98.765432%, 83.950617%, 72.222222%)">
+							&nbsp;</td>
+						<td colspan="2" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 3.755000pt; border-top-color: rgb(96.666667%, 58.666667%, 27.333333%); border-right-width: 4.500000pt; border-right-color: rgb(95.000000%, 55.000000%, 25.000000%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.396396%, 58.558559%, 27.027027%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.010000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.030000pt; border-left-color: rgb(98.994975%, 84.422111%, 72.864322%)">
+							&nbsp;</td>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.010000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">TORQUE, T </span></p>
+								</div>
+							</div>
+						</td>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.850394%, 58.267717%, 26.771654%); border-bottom-width: 0.010000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.010000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.850394%, 58.267717%, 26.771654%)">
+							&nbsp;</td>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 4.500000pt; border-right-color: rgb(95.238095%, 57.142857%, 26.190476%); border-bottom-width: 0.010000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">VOLTAGE, e </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.010000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.694215%, 58.677686%, 27.272727%); border-bottom-width: 2.250000pt; border-bottom-color: rgb(95.238095%, 58.333333%, 27.380952%); border-left-width: 6.030000pt; border-left-color: rgb(98.295455%, 84.090909%, 72.159091%)">
+							&nbsp;</td>
+						<td colspan="2" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.010000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 4.500000pt; border-right-color: rgb(95.000000%, 57.500000%, 25.000000%); border-bottom-width: 2.250000pt; border-bottom-color: rgb(96.428571%, 58.333333%, 27.380952%); border-left-width: 1.500000pt; border-left-color: rgb(96.694215%, 58.677686%, 27.272727%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; border-top-width: 2.250000pt; border-top-color: rgb(98.461538%, 76.410256%, 58.461538%); border-right-width: 6.030000pt; border-right-color: rgb(96.666667%, 56.666667%, 26.666667%); border-bottom-width: 0.755000pt; border-bottom-color: rgb(96.812749%, 58.565737%, 27.091633%); border-left-width: 6.000000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">DEPENDENT VARIABLE(OUTPUT) </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 2.250000pt; border-top-color: rgb(95.238095%, 58.333333%, 27.380952%); border-right-width: 1.500000pt; border-right-color: rgb(96.694215%, 58.677686%, 26.446281%); border-bottom-width: 0.755000pt; border-bottom-color: rgb(96.734694%, 58.775510%, 27.346939%); border-left-width: 6.030000pt; border-left-color: rgb(96.666667%, 56.666667%, 26.666667%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">ANGULAR VELOCITY, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">&omega; </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="2" rowspan="1" style="border-style: solid; border-top-width: 2.250000pt; border-top-color: rgb(96.428571%, 58.333333%, 27.380952%); border-right-width: 4.500000pt; border-right-color: rgb(94.871795%, 56.410256%, 25.641026%); border-bottom-width: 0.755000pt; border-bottom-color: rgb(96.837945%, 58.498024%, 27.272727%); border-left-width: 1.500000pt; border-left-color: rgb(96.694215%, 58.677686%, 26.446281%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">CURRENT, i </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.755000pt; border-top-color: rgb(96.812749%, 58.565737%, 27.091633%); border-right-width: 6.030000pt; border-right-color: rgb(96.666667%, 56.666667%, 26.666667%); border-bottom-width: 3.755000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.755000pt; border-top-color: rgb(96.734694%, 58.775510%, 27.346939%); border-right-width: 1.500000pt; border-right-color: rgb(96.694215%, 58.677686%, 27.272727%); border-bottom-width: 3.755000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.030000pt; border-left-color: rgb(96.666667%, 56.666667%, 26.666667%)">
+							&nbsp;</td>
+						<td colspan="2" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.755000pt; border-top-color: rgb(96.837945%, 58.498024%, 27.272727%); border-right-width: 4.500000pt; border-right-color: rgb(95.000000%, 57.500000%, 25.000000%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.721311%, 58.196721%, 27.049180%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 3.755000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 6.750000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(96.774194%, 58.064516%, 25.806452%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">DISSIPATIVE ELEMENT </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 3.755000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 6.750000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.030000pt; border-left-color: rgb(96.875000%, 56.250000%, 25.000000%)">
+							&nbsp;</td>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 3.755000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">ROTATIONAL COEFFICIENT OF </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 3.755000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.850394%, 58.267717%, 26.771654%); border-bottom-width: 6.750000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 6.750000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.850394%, 58.267717%, 26.771654%)">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 4.500000pt; border-right-color: rgb(95.238095%, 57.142857%, 26.190476%); border-bottom-width: 6.750000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">RESISTANCE , R </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 6.750000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">DASHPOT , B </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 6.750000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 6.030000pt; border-right-color: rgb(96.666667%, 56.666667%, 26.666667%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.825397%, 58.730159%, 27.380952%); border-left-width: 6.000000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 6.750000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.721311%, 58.196721%, 27.049180%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.747967%, 58.536585%, 27.235772%); border-left-width: 6.030000pt; border-left-color: rgb(96.666667%, 56.666667%, 26.666667%)">
+							&nbsp;</td>
+						<td colspan="2" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 6.750000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 4.500000pt; border-right-color: rgb(95.000000%, 57.500000%, 25.000000%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.850394%, 58.661417%, 27.165354%); border-left-width: 1.500000pt; border-left-color: rgb(96.721311%, 58.196721%, 27.049180%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="5" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.825397%, 58.730159%, 27.380952%); border-right-width: 6.030000pt; border-right-color: rgb(93.103448%, 55.172414%, 24.137931%); border-bottom-width: 4.500000pt; border-bottom-color: rgb(95.121951%, 58.536585%, 26.829268%); border-left-width: 6.000000pt; border-left-color: rgb(92.857143%, 53.571429%, 25.000000%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">STORAGE ELEMENT </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.747967%, 58.536585%, 27.235772%); border-right-width: 1.500000pt; border-right-color: rgb(96.521739%, 58.260870%, 26.956522%); border-bottom-width: 4.500000pt; border-bottom-color: rgb(95.000000%, 57.500000%, 25.000000%); border-left-width: 6.030000pt; border-left-color: rgb(96.551724%, 55.172414%, 24.137931%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">MOMENT OF INERTIA, J </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="2" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.850394%, 58.661417%, 27.165354%); border-right-width: 4.500000pt; border-right-color: rgb(94.736842%, 57.894737%, 23.684211%); border-bottom-width: 4.500000pt; border-bottom-color: rgb(98.623853%, 83.027523%, 71.100917%); border-left-width: 1.500000pt; border-left-color: rgb(96.521739%, 58.260870%, 26.956522%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">INDUCTANCE, L </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 4.500000pt; border-top-color: rgb(95.000000%, 57.500000%, 25.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.638655%, 58.823529%, 26.890756%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.030000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							&nbsp;</td>
+						<td colspan="1" rowspan="4" style="border-style: solid; border-top-width: 4.500000pt; border-top-color: rgb(98.876404%, 83.146067%, 70.224719%); border-right-width: 0.000000pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 4.500000pt; border-bottom-color: rgb(98.876404%, 83.146067%, 70.224719%); border-left-width: 1.500000pt; border-left-color: rgb(96.721311%, 58.196721%, 27.049180%)">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 4.500000pt; border-top-color: rgb(98.630137%, 83.561644%, 71.232877%); border-right-width: 4.500000pt; border-right-color: rgb(95.000000%, 57.500000%, 25.000000%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">INVERSEOF </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.030000pt; border-left-color: rgb(96.875000%, 56.250000%, 25.000000%)">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">STIFFNESS OF SPRING, K </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.850394%, 58.267717%, 26.771654%); border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 4.500000pt; border-right-color: rgb(95.000000%, 57.500000%, 25.000000%); border-bottom-width: 4.500000pt; border-bottom-color: rgb(98.630137%, 83.561644%, 71.232877%); border-left-width: 0.000000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">CAPACITANCE, 1/C </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.610169%, 58.474576%, 27.118644%); border-bottom-width: 4.500000pt; border-bottom-color: rgb(95.000000%, 57.500000%, 25.000000%); border-left-width: 6.030000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; border-top-width: 4.500000pt; border-top-color: rgb(95.121951%, 58.536585%, 26.829268%); border-right-width: 6.030000pt; border-right-color: rgb(96.428571%, 57.142857%, 25.000000%); border-bottom-width: 1.500000pt; border-bottom-color: rgb(96.800000%, 58.400000%, 27.200000%); border-left-width: 6.000000pt; border-left-color: rgb(96.296296%, 59.259259%, 25.925926%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">PHYSICAL LAW </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 4.500000pt; border-top-color: rgb(95.000000%, 57.500000%, 25.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.521739%, 58.260870%, 26.956522%); border-bottom-width: 1.500000pt; border-bottom-color: rgb(95.934959%, 58.536585%, 26.829268%); border-left-width: 6.030000pt; border-left-color: rgb(96.428571%, 57.142857%, 25.000000%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">NEWTON SECOND LAW, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">&sum;</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">T=0 </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="2" rowspan="1" style="border-style: solid; border-top-width: 4.500000pt; border-top-color: rgb(98.623853%, 83.027523%, 71.100917%); border-right-width: 4.500000pt; border-right-color: rgb(94.736842%, 57.894737%, 23.684211%); border-bottom-width: 1.500000pt; border-bottom-color: rgb(96.825397%, 58.730159%, 26.984127%); border-left-width: 1.500000pt; border-left-color: rgb(96.521739%, 58.260870%, 26.956522%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">KIRCHOFF VOLTAGE LAW, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">&sum;</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">v=0 </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 1.500000pt; border-top-color: rgb(96.800000%, 58.400000%, 27.200000%); border-right-width: 6.030000pt; border-right-color: rgb(98.930481%, 84.491979%, 73.262032%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(98.395722%, 83.957219%, 72.727273%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">CHANGING THE LEVEL OF </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 1.500000pt; border-top-color: rgb(95.934959%, 58.536585%, 26.829268%); border-right-width: 1.500000pt; border-right-color: rgb(96.694215%, 58.677686%, 27.272727%); border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.030000pt; border-left-color: rgb(98.351648%, 84.065934%, 72.527473%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">OF </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="2" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 1.500000pt; border-top-color: rgb(96.825397%, 58.730159%, 26.984127%); border-right-width: 4.500000pt; border-right-color: rgb(95.000000%, 57.500000%, 25.000000%); border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.694215%, 58.677686%, 27.272727%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.030000pt; border-left-color: rgb(98.994975%, 84.422111%, 72.864322%)">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">GEAR </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.850394%, 58.267717%, 26.771654%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.850394%, 58.267717%, 26.771654%)">
+							&nbsp;</td>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 4.500000pt; border-right-color: rgb(95.238095%, 57.142857%, 26.190476%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">TRANSFORMER </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 6.030000pt; border-right-color: rgb(98.445596%, 84.455959%, 72.538860%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.825397%, 58.730159%, 27.380952%); border-left-width: 6.000000pt; border-left-color: rgb(98.445596%, 84.455959%, 72.538860%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">INDEPENDENT VARIABLE </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.694215%, 58.677686%, 27.272727%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.747967%, 58.536585%, 27.235772%); border-left-width: 6.030000pt; border-left-color: rgb(98.421053%, 84.210526%, 72.631579%)">
+							&nbsp;</td>
+						<td colspan="2" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 4.500000pt; border-right-color: rgb(95.000000%, 57.500000%, 25.000000%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.850394%, 58.661417%, 27.165354%); border-left-width: 1.500000pt; border-left-color: rgb(96.694215%, 58.677686%, 27.272727%)">
+							&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">GUIDELINES TO OBTAIN ELECTRICAL ANALOGOUS SYSTEMS BASED ON TORQUE CURRENT ANALOGY: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">In electrical systems the elements in parallel will have same voltage, likewise in mechanical systems, the elements have same force are said to be in parallel.<br />
+						The elements having same angular velocity in mechanical system should have analogous same voltage in electrical analogous system. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">Each node in the mechanical system corresponds to a closed loop in electrical system. The number of meshes in electrical analogous is same as that of the number of nodes in mechanical system. Hence the number of node voltage and system equations will be </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">9- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 12">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">same as that of the number of velocities of nodes (moment of inertia) in mechanical systems.<br />
+						The mechanical driving force (torque) and passive elements connected to the node in mechanical system should be represented by analogous elements in a closed loop in analogous electrical system. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The elements connected between two nodes (moment of inertia) in mechanical systems are represented as a common element between two meshes in electrical analogous system. </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(50.600000%, 0.000000%, 0.000000%)">TORQUE CURRENT ANALOGY: </span></p>
+				</div>
+			</div>
+			<table style="border-collapse: collapse">
+				<colgroup>
+					<col style="width: 31.443299%" />
+					<col style="width: 2.397704%" />
+					<col style="width: 33.674142%" />
+					<col style="width: 1.120204%" />
+					<col style="width: 1.275375%" />
+					<col style="width: 29.053034%" />
+					<col style="width: 1.036242%" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<td style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.825397%, 58.730159%, 27.380952%); border-right-width: 6.000000pt; border-right-color: rgb(96.296296%, 55.555556%, 25.925926%); border-bottom-width: 5.250000pt; border-bottom-color: rgb(97.894737%, 72.105263%, 51.052632%); border-left-width: 6.000000pt; border-left-color: rgb(96.296296%, 55.555556%, 25.925926%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">ITEM </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.747967%, 58.536585%, 27.235772%); border-right-width: 1.500000pt; border-right-color: rgb(96.491228%, 58.771930%, 27.192982%); border-bottom-width: 5.250000pt; border-bottom-color: rgb(97.169811%, 59.433962%, 28.301887%); border-left-width: 6.000000pt; border-left-color: rgb(96.296296%, 55.555556%, 25.925926%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">MECHANICAL SYSTEM </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.850394%, 58.661417%, 27.165354%); border-right-width: 0.750000pt; border-right-color: rgb(96.460177%, 58.407080%, 26.991150%); border-bottom-width: 5.250000pt; border-bottom-color: rgb(96.261682%, 57.943925%, 27.102804%); border-left-width: 1.500000pt; border-left-color: rgb(96.491228%, 58.771930%, 27.192982%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">ELECTRICAL SYSTEM </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="3" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 5.250000pt; border-top-color: rgb(97.894737%, 72.105263%, 51.052632%); border-right-width: 6.000000pt; border-right-color: rgb(98.437500%, 84.375000%, 72.916667%); border-bottom-width: 3.775000pt; border-bottom-color: rgb(98.584906%, 82.075472%, 68.396226%); border-left-width: 6.000000pt; border-left-color: rgb(98.224852%, 84.023669%, 71.005917%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">INDEPENDENT VARIABLE(INPUT) </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 5.250000pt; border-top-color: rgb(97.169811%, 59.433962%, 28.301887%); border-right-width: 1.500000pt; border-right-color: rgb(96.428571%, 58.035714%, 26.785714%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(98.837209%, 84.302326%, 72.674419%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 5.250000pt; border-top-color: rgb(96.261682%, 57.943925%, 27.102804%); border-right-width: 0.750000pt; border-right-color: rgb(96.943231%, 58.515284%, 27.074236%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.428571%, 58.035714%, 26.785714%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(99.115044%, 85.398230%, 73.893805%)">
+							&nbsp;</td>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">TORQUE , T </span></p>
+								</div>
+							</div>
+						</td>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.850394%, 58.267717%, 26.771654%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.850394%, 58.267717%, 26.771654%)">
+							&nbsp;</td>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">CURRENT, i </span></p>
+								</div>
+							</div>
+						</td>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.750000pt; border-right-color: rgb(96.862745%, 58.823529%, 27.450980%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.721311%, 58.196721%, 27.049180%); border-bottom-width: 3.775000pt; border-bottom-color: rgb(94.230769%, 59.615385%, 30.769231%); border-left-width: 6.000000pt; border-left-color: rgb(98.913043%, 84.782609%, 72.826087%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.750000pt; border-right-color: rgb(96.734694%, 58.775510%, 27.346939%); border-bottom-width: 3.775000pt; border-bottom-color: rgb(95.918367%, 57.142857%, 26.530612%); border-left-width: 1.500000pt; border-left-color: rgb(96.721311%, 58.196721%, 27.049180%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; border-top-width: 3.775000pt; border-top-color: rgb(98.584906%, 82.075472%, 68.396226%); border-right-width: 6.000000pt; border-right-color: rgb(96.428571%, 57.142857%, 25.000000%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.825397%, 58.730159%, 27.380952%); border-left-width: 6.000000pt; border-left-color: rgb(96.428571%, 57.142857%, 25.000000%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">DEPENDENT VARIABLE(OUTPUT) </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 3.775000pt; border-top-color: rgb(94.230769%, 59.615385%, 30.769231%); border-right-width: 1.500000pt; border-right-color: rgb(96.666667%, 58.333333%, 26.666667%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.747967%, 58.536585%, 27.235772%); border-left-width: 6.000000pt; border-left-color: rgb(96.428571%, 57.142857%, 25.000000%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">ANGULAR VELOCITY, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">&omega; </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 3.775000pt; border-top-color: rgb(95.918367%, 57.142857%, 26.530612%); border-right-width: 0.750000pt; border-right-color: rgb(97.033898%, 58.898305%, 27.542373%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.850394%, 58.661417%, 27.165354%); border-left-width: 1.500000pt; border-left-color: rgb(96.666667%, 58.333333%, 26.666667%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">VOLTAGE, v </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.750000pt; border-top-color: rgb(96.825397%, 58.730159%, 27.380952%); border-right-width: 6.000000pt; border-right-color: rgb(96.551724%, 58.620690%, 24.137931%); border-bottom-width: 3.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.750000pt; border-top-color: rgb(96.747967%, 58.536585%, 27.235772%); border-right-width: 1.500000pt; border-right-color: rgb(96.721311%, 58.196721%, 27.049180%); border-bottom-width: 3.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.750000pt; border-top-color: rgb(96.850394%, 58.661417%, 27.165354%); border-right-width: 0.750000pt; border-right-color: rgb(96.761134%, 58.704453%, 27.125506%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.747967%, 58.536585%, 26.829268%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 3.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 7.505000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(96.774194%, 58.064516%, 25.806452%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">DISSIPATIVE ELEMENT </span></p>
+								</div>
+							</div>
+						</td>
+						<td style="border-style: solid; border-top-width: 3.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 7.505000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(96.774194%, 58.064516%, 25.806452%)">
+							&nbsp;</td>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 3.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 7.505000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">ROTATIONAL COEFFICIENT DASHPOT , B </span></p>
+								</div>
+							</div>
+						</td>
+						<td style="border-style: solid; border-top-width: 3.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.850394%, 58.267717%, 26.771654%); border-bottom-width: 7.505000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 7.505000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.850394%, 58.267717%, 26.771654%)">
+							&nbsp;</td>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 7.505000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">CONDUCTANCE ,G=1/R </span></p>
+								</div>
+							</div>
+						</td>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.750000pt; border-right-color: rgb(96.862745%, 58.823529%, 27.450980%); border-bottom-width: 7.505000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 7.505000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 6.000000pt; border-right-color: rgb(96.666667%, 56.666667%, 26.666667%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.825397%, 58.730159%, 27.380952%); border-left-width: 6.000000pt; border-left-color: rgb(96.666667%, 56.666667%, 26.666667%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 7.505000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.747967%, 58.536585%, 26.829268%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.747967%, 58.536585%, 27.235772%); border-left-width: 6.000000pt; border-left-color: rgb(96.666667%, 56.666667%, 26.666667%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 7.505000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.750000pt; border-right-color: rgb(96.761134%, 58.704453%, 27.125506%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.850394%, 58.661417%, 27.165354%); border-left-width: 1.500000pt; border-left-color: rgb(96.747967%, 58.536585%, 26.829268%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="6" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.825397%, 58.730159%, 27.380952%); border-right-width: 6.000000pt; border-right-color: rgb(92.857143%, 57.142857%, 25.000000%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.825397%, 58.730159%, 27.380952%); border-left-width: 6.000000pt; border-left-color: rgb(92.857143%, 57.142857%, 25.000000%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">STORAGE ELEMENT </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.747967%, 58.536585%, 27.235772%); border-right-width: 1.500000pt; border-right-color: rgb(96.721311%, 58.196721%, 27.049180%); border-bottom-width: 0.755000pt; border-bottom-color: rgb(96.734694%, 58.775510%, 27.346939%); border-left-width: 6.000000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">MOMENT OF INERTIA , J </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.850394%, 58.661417%, 27.165354%); border-right-width: 0.750000pt; border-right-color: rgb(96.734694%, 58.775510%, 27.346939%); border-bottom-width: 0.755000pt; border-bottom-color: rgb(96.837945%, 58.498024%, 27.272727%); border-left-width: 1.500000pt; border-left-color: rgb(96.721311%, 58.196721%, 27.049180%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">CAPACITANCE, C </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.755000pt; border-top-color: rgb(96.734694%, 58.775510%, 27.346939%); border-right-width: 1.500000pt; border-right-color: rgb(96.721311%, 58.196721%, 27.049180%); border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.755000pt; border-top-color: rgb(96.837945%, 58.498024%, 27.272727%); border-right-width: 0.750000pt; border-right-color: rgb(96.638655%, 58.823529%, 27.310924%); border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.610169%, 58.474576%, 27.118644%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="3" style="border-style: solid; border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.850394%, 58.267717%, 26.771654%)">
+							&nbsp;</td>
+						<td colspan="1" rowspan="3" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">INVERSEOF INDUCTANCE, 1/L </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="1" rowspan="3" style="border-style: solid; border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.750000pt; border-right-color: rgb(96.862745%, 58.823529%, 27.450980%); border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(96.774194%, 58.064516%, 25.806452%)">
+							&nbsp;</td>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">STIFFNESS OF SPRING, K </span></p>
+								</div>
+							</div>
+						</td>
+						<td style="border-style: solid; border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.850394%, 58.267717%, 26.771654%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="3" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.721311%, 58.196721%, 27.049180%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.747967%, 58.536585%, 27.235772%); border-left-width: 6.000000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="3" rowspan="1" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.750000pt; border-right-color: rgb(96.638655%, 58.823529%, 27.310924%); border-bottom-width: 0.750000pt; border-bottom-color: rgb(96.850394%, 58.661417%, 27.165354%); border-left-width: 1.500000pt; border-left-color: rgb(96.610169%, 58.474576%, 27.118644%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.825397%, 58.730159%, 27.380952%); border-right-width: 6.000000pt; border-right-color: rgb(96.551724%, 58.620690%, 24.137931%); border-bottom-width: 1.505000pt; border-bottom-color: rgb(96.800000%, 58.400000%, 27.200000%); border-left-width: 6.000000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">PHYSICAL LAW </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.747967%, 58.536585%, 27.235772%); border-right-width: 1.500000pt; border-right-color: rgb(96.721311%, 58.196721%, 27.049180%); border-bottom-width: 1.505000pt; border-bottom-color: rgb(95.934959%, 58.536585%, 26.829268%); border-left-width: 6.000000pt; border-left-color: rgb(96.551724%, 58.620690%, 24.137931%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">NEWTON SECOND LAW, </span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">&sum;</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">T=0 </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="1" style="border-style: solid; border-top-width: 0.750000pt; border-top-color: rgb(96.850394%, 58.661417%, 27.165354%); border-right-width: 0.750000pt; border-right-color: rgb(96.747967%, 58.536585%, 27.235772%); border-bottom-width: 1.505000pt; border-bottom-color: rgb(96.825397%, 58.730159%, 26.984127%); border-left-width: 1.500000pt; border-left-color: rgb(96.721311%, 58.196721%, 27.049180%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">KIRCHOFF CURRENT LAW </span></p>
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">&sum;</span><span style="font-size: 12.000000pt; font-family: 'Times New Roman'">i=0 </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 1.505000pt; border-top-color: rgb(96.800000%, 58.400000%, 27.200000%); border-right-width: 6.000000pt; border-right-color: rgb(96.428571%, 57.142857%, 25.000000%); border-bottom-width: 0.010000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(96.428571%, 57.142857%, 25.000000%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 1.505000pt; border-top-color: rgb(95.934959%, 58.536585%, 26.829268%); border-right-width: 1.500000pt; border-right-color: rgb(96.747967%, 58.536585%, 26.829268%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(98.561151%, 82.014388%, 69.784173%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">OF </span></p>
+								</div>
+							</div>
+						</td>
+						<td colspan="3" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 1.505000pt; border-top-color: rgb(96.825397%, 58.730159%, 26.984127%); border-right-width: 0.750000pt; border-right-color: rgb(96.774194%, 58.467742%, 27.419355%); border-bottom-width: 0.005000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.747967%, 58.536585%, 26.829268%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="1" rowspan="3" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.010000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 6.000000pt; border-right-color: rgb(99.115044%, 85.398230%, 73.893805%); border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(98.989899%, 84.343434%, 72.727273%)">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Cambria,Bold'">CHANGING THE LEVEL OF INDEPENDENT VARIABLE </span></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 6.000000pt; border-left-color: rgb(99.115044%, 85.398230%, 73.893805%)">
+							&nbsp;</td>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">GEAR </span></p>
+								</div>
+							</div>
+						</td>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.850394%, 58.267717%, 26.771654%); border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 1.500000pt; border-left-color: rgb(96.850394%, 58.267717%, 26.771654%)">
+							&nbsp;</td>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.000000pt; border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							<div class="layoutArea">
+								<div class="column">
+									<p>
+										<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">TRANSFORMER </span></p>
+								</div>
+							</div>
+						</td>
+						<td style="border-style: solid; border-top-width: 0.005000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.750000pt; border-right-color: rgb(96.862745%, 58.823529%, 27.450980%); border-bottom-width: 0.000000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.000000pt">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="3" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 1.500000pt; border-right-color: rgb(96.747967%, 58.536585%, 26.829268%); border-bottom-width: 1.500000pt; border-bottom-color: rgb(95.934959%, 58.536585%, 26.829268%); border-left-width: 6.000000pt; border-left-color: rgb(98.561151%, 82.014388%, 69.784173%)">
+							&nbsp;</td>
+						<td colspan="3" rowspan="2" style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.750000pt; border-right-color: rgb(96.774194%, 58.467742%, 27.419355%); border-bottom-width: 1.500000pt; border-bottom-color: rgb(96.825397%, 58.730159%, 26.984127%); border-left-width: 1.500000pt; border-left-color: rgb(96.747967%, 58.536585%, 26.829268%)">
+							&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="border-style: solid; background-color: rgb(99.200000%, 89.400000%, 81.600000%); border-top-width: 0.000000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 6.000000pt; border-right-color: rgb(96.428571%, 57.142857%, 25.000000%); border-bottom-width: 1.500000pt; border-bottom-color: rgb(96.800000%, 58.400000%, 27.200000%); border-left-width: 6.000000pt; border-left-color: rgb(96.428571%, 57.142857%, 25.000000%)">
+							&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">OF </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">10- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 13">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(31.000000%, 38.400000%, 15.700000%)">LIST OF BUILT-IN </span><span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(22.700000%, 34.500000%, 11.000000%)">HEADER </span><span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(31.000000%, 38.400000%, 15.700000%)">FILES INCLUDED </span></p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 16.000000pt; font-family: 'Cambria,Bold'; color: rgb(75.300000%, 31.400000%, 30.200000%)">Name </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 14.000000pt; font-family: 'Cambria,Bold'; color: rgb(12.200000%, 28.600000%, 49.000000%)">stdio.h </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 14.000000pt; font-family: 'Cambria,Bold'; color: rgb(12.200000%, 28.600000%, 49.000000%)">graphics.h </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 16.000000pt; font-family: 'Cambria,Bold'; color: rgb(75.300000%, 31.400000%, 30.200000%)">Operation </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 14.000000pt; font-family: 'Cambria'; color: rgb(19.200000%, 51.800000%, 60.800000%)">Includes all standard input/output functions </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 14.000000pt; font-family: 'Cambria,Bold'; color: rgb(12.200000%, 28.600000%, 49.000000%)">conio.h </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 14.000000pt; font-family: 'Cambria'; color: rgb(19.200000%, 51.800000%, 60.800000%)">Includes all console input/output functions </span></p>
+						<p>
+							<span style="font-size: 14.000000pt; font-family: 'Cambria'; color: rgb(19.200000%, 51.800000%, 60.800000%); background-color: rgb(82.400000%, 91.800000%, 94.500000%)">Includes all graphics related functions </span></p>
+						<p>
+							<span style="font-size: 14.000000pt; font-family: 'Cambria'; color: rgb(19.200000%, 51.800000%, 60.800000%)">Includes all interrupt related functions </span></p>
+					</div>
+				</div>
+				<div class="layoutArea">
+					<div class="column">
+						<p>
+							<span style="font-size: 14.000000pt; font-family: 'Cambria,Bold'; color: rgb(12.200000%, 28.600000%, 49.000000%)">Dos.h </span></p>
+					</div>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(31.000000%, 38.400000%, 15.700000%)">SOME IMPORTANT USER DEFINED FUNCTIONS </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">RealiseVolt() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This function is responsible for synthesis of the Force-Voltage electrical equivalent analogous circuit for the designed mechanical modal. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This function in turn calls the RealiseVoltLoopDivision() function </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">RealiseVoltLoopDivision() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The function of this method is to call the various user defined functions which places the electrical analogous elements in the design windows according to the developed logic. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This function calls the following functions drawind h() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">drawcap v() drawi() drawe() drawresv() drawresh() </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">drawindh() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This subroutine is used to place a model inductor according to the passed coordinates values. </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">11- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 14">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">drawresh() &amp; drawresv() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">These two functions are used to place a model resistor as per the values of coordinates passed horizontally and vertically respectively. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">drawcapv() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This is used to place capacitor on the design area. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">RealiseCurrent() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This function is responsible for obtaining Force-Current electrical equivalent analogous circuit. This functions is similar to realisevolt. It calls RealiseCurrentLoopDivision(). </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">RealiseCurrentLoopDivision() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This function is similar to RealiseVoltLoopDivision() calling user defined functions to place the appropriate electrical equivalent analogs but according to a different logic. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">HomeWindowScan() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">Scans for a mouse click in the Home Page Window and passes the appropriate value to the click() function. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">ConfirmationScan() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This function Scans for mouse click in the confirmation window and passes the appropriate value to the click2() function. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">TranslationScan() and RotationScan() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This function passes appropriate value to the click() function after detecting a mouse click. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">Click() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This function calls other functions based on the values passed to it by the different scan routines. </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">12- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 15">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(46.300000%, 57.300000%, 23.500000%)">USER DEFINED FILES </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(12.200000%, 28.600000%, 49.000000%)">About.cpp </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This file contains help() and intro() functions. These functions give the user an idea about the package and its functionalities. This aids the new user getting familiarized with the project. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(12.200000%, 28.600000%, 49.000000%)">Screen.cpp </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This files contains functions necessary for the creation of windows like GUI screen. The window developed contains buttons for aided user interaction </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(12.200000%, 28.600000%, 49.000000%)">Gui.cpp </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This files is responsible for calling of the mouse interrupt through the user developed functions for mouse interface. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This file contains the following sub routines. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(12.200000%, 28.600000%, 49.000000%)">ShowMousePointer() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">To display mouse pointer on the user screen. It uses function 01h of INT 33h for this purpo se. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(12.200000%, 28.600000%, 49.000000%)">ReadMousePointer() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">To read the current mouse coordinates of pointer. This uses function 03h of INT 33h to read coordinates as well as the status of buttons </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(12.200000%, 28.600000%, 49.000000%)">HideMousePointer() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This function is to hide the mouse pointer from the screen. Useful while drawing in graphics mode. It uses function 02 of INT 33h. </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(12.200000%, 28.600000%, 49.000000%)">InitializeGraphics() </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">This function is for graphics mode initialization. This function returns the appropriate error message if the graphics initialization fails. </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">13- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 16">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">SALIENT FEATURES: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The design of the project is centered on user friendliness and greater usage of the GUI concepts like mouse programming. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The simulator provides user the power to virtually design the mechanical system and find its electrical analogous circuit in an easy manner. </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">Very cost effective as it eliminates the need to implement the mechanical design for real and also aids in faster design. </span></p>
+					<p>
+						<span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">LIMITATIONS: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">Calculations of obtained electrical analogous circuit elements in terms of their values are not available currently.<br />
+						The designed system cannot be retrieved later for </span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">future reference. </span></p>
+					<p>
+						<span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">FUTURE ENHANCEMENTS: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">To overcome the limitation on the number of mass elements that can be placed in the design area by incorporating scrolling of the screen.<br />
+						To preserve the designed system and obtained analogous circuit for future. </span></p>
+					<p>
+						<span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">CONCLUSION: </span></p>
+					<p>
+						<span style="font-size: 12.000000pt; font-family: 'Times New Roman'">The developed project can be of immense help to the mechanical designers. The generation of equivalent electrical parameters aids in better and faster analysis of the designed mechanical systems. The software project is developed keeping in view user friendliness and ease of navigation by using GUI. </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">14- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 17">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">REFERENCE: </span></p>
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Times New Roman'">Byron S. Gottfried,&rdquo; THEORY AND PROBLEMS OF PROGRAMMING WITH C&rdquo;, </span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">Tata McGraw-Hill Edition, Second Edition. </span></p>
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Times New Roman'">Norman S.Nise,&rdquo; CONTROL SYSTEMS ENGINEERING&rdquo;, John Wiley &amp; Sons,INC, Fourth </span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">Edition. </span></p>
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Times New Roman'">Nagoor Kani,</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">&rdquo; </span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">CONTROL SYSTEMS</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">&rdquo;, </span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">RBA Publication, First Edition. </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman'">-</span><span style="font-size: 11.000000pt; font-family: 'Times New Roman'">15- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 18">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 16.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(31.000000%, 38.400000%, 15.700000%)">SCREENSHOTS </span></p>
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">Home Page of Project </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">Mechanical Translational Model Design </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Calibri'">- </span><span style="font-size: 14.000000pt; font-family: 'Calibri'">60</span><span style="font-size: 11.000000pt; font-family: 'Calibri'">- </span></p>
+				</div>
+			</div>
+		</div>
+		<div class="page" title="Page 19">
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">Force-Voltage Electrical Analogous Circuit </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 14.000000pt; font-family: 'Times New Roman,Bold'; color: rgb(75.300000%, 0.000000%, 0.000000%)">Force-Current Electrical Analogous Circuit </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Cambria,Italic'; color: rgb(46.300000%, 57.300000%, 23.500000%)">Electrical Analogous Circuit Design Using C </span></p>
+				</div>
+			</div>
+			<div class="layoutArea">
+				<div class="column">
+					<p>
+						<span style="font-size: 11.000000pt; font-family: 'Calibri'">- </span><span style="font-size: 14.000000pt; font-family: 'Calibri'">61</span><span style="font-size: 11.000000pt; font-family: 'Calibri'">-&nbsp;</span></p>
+				</div>
+			</div>
+		</div>
+		<p>
+			&nbsp;</p>
+ </section>
     </div>
-
     
   </body>
 </html>
+
