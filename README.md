@@ -6,7 +6,7 @@ Once obtained, the electrical analogy paves way for accurate and easier manipula
 [Design Details Theory](http://lpsa.swarthmore.edu/Analogs/ElectricalMechanicalAnalogs.html)
 
 
-![alt text](https://github.com/bourneagain/ElectricalAnalogousCircuitDesign/tree/master/screenShots/home.png "Logo Title Text 1")
-![alt text](https://github.com/bourneagain/ElectricalAnalogousCircuitDesign/tree/master/screenShots/design.png "Logo Title Text")
-![alt text](https://github.com/bourneagain/ElectricalAnalogousCircuitDesign/tree/master/screenShots/design2.png "")
-![alt text](https://github.com/bourneagain/ElectricalAnalogousCircuitDesign/tree/master/screenShots/design3.png "")
+![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/home.png )
+![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/design.png) 
+![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/design2.png)
+![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/design3.png)
