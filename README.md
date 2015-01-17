@@ -10,3 +10,4 @@ Once obtained, the electrical analogy paves way for accurate and easier manipula
 ![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/design.png) 
 ![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/design2.png)
 ![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/design3.png)
+![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/info.png)
