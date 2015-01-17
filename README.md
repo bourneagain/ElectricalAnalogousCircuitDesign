@@ -4,3 +4,10 @@ The project acquaints the user with a Graphical User Interface (GUI) to help him
 Once obtained, the electrical analogy paves way for accurate and easier manipulation and further research into the development of designed mechanical design.
 
 [Design Details Theory](http://lpsa.swarthmore.edu/Analogs/ElectricalMechanicalAnalogs.html)
+
+
+![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/home.png )
+![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/design.png) 
+![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/design2.png)
+![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/design3.png)
+![ScreenShot](https://raw.githubusercontent.com/bourneagain/ElectricalAnalogousCircuitDesign/master/screenShots/info.png)
